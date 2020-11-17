@@ -1,0 +1,48 @@
+{
+    "reason": "查询成功",
+    "result": [
+        {
+            "lottery_id": "ssq",
+            "lottery_name": "双色球",
+            "lottery_type_id": "1",
+            "remarks": "每周二、四、日开奖"
+        },
+        {
+            "lottery_id": "dlt",
+            "lottery_name": "超级大乐透",
+            "lottery_type_id": "2",
+            "remarks": "每周一、三、六开奖"
+        },
+        {
+            "lottery_id": "qlc",
+            "lottery_name": "七乐彩",
+            "lottery_type_id": "1",
+            "remarks": "每周一、三、五开奖"
+        },
+        {
+            "lottery_id": "fcsd",
+            "lottery_name": "福彩3D",
+            "lottery_type_id": "1",
+            "remarks": "每日开奖"
+        },
+        {
+            "lottery_id": "qxc",
+            "lottery_name": "七星彩",
+            "lottery_type_id": "2",
+            "remarks": "每周二、五、日开奖"
+        },
+        {
+            "lottery_id": "pls",
+            "lottery_name": "排列3",
+            "lottery_type_id": "2",
+            "remarks": "每日开奖"
+        },
+        {
+            "lottery_id": "plw",
+            "lottery_name": "排列5",
+            "lottery_type_id": "2",
+            "remarks": "每日开奖"
+        }
+    ],
+    "error_code": 0
+}
