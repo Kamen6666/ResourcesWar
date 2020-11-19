@@ -58,9 +58,8 @@
         "buyPrice":10,
         "sellPrice":5,
         "sprite":"Sprites/Items/Hempen Robe",
-		"physical_Damage":
-		"magical_Damage":
-		"physical_Defence"
+		"physical_Defence":15,
+		"magical_Defence":22
 	},
 	{
 		"id":6,
@@ -70,7 +69,68 @@
         "description":"增加15物理防御，28魔法防御",
         "buyPrice":10,
         "sellPrice":5,
-        "sprite":"Sprites/Items/Maiden Kiss",
+        "sprite":"Sprites/Items/Silken Robe",
+		"physical_Defence":15,
+		"magical_Defence":28
+	},
+	{
+		"id":7,
+        "name":"魔道士长袍",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加15物理防御，30魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Magus Robe",
+		"physical_Defence":15,
+		"magical_Defence":30
+	},
+	{
+		"id":8,
+        "name":"变色龙袍",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加19物理防御，30魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Mistle Robe",
+		"physical_Defence":19,
+		"magical_Defence":30
+	},
+	{
+		"id":9,
+        "name":"火群之衣",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加25物理防御，30魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Blaze Robe",
+		"physical_Defence":25,
+		"magical_Defence":30
+	},
+	{
+		"id":10,
+        "name":"雪花之衣",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加25物理防御，35魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Flurry Robe",
+		"physical_Defence":25,
+		"magical_Defence":35
+	},
+	{
+		"//":"--------------------武器类------------------"
+		"id":5,
+        "name":"麻布长袍",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加15物理防御，22魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Hempen Robe",
 	}
 	
 	
