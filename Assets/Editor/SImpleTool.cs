@@ -64,7 +64,23 @@ public class SImpleTool : Editor
     //文件名字
     private static string TextName = "BoardJsonText";
     //文件路径
-    private static string TextPath = Application.dataPath + "/" + TextName + ".json";
+    private static string TextPath = Application.dataPath + "/" + TextName + ".txt";
+    [MenuItem("SimpleTool/AlignBoard(对齐棋盘)")]
+    private static void AlignBoard()
+    {
+        //获得棋盘父物体
+        GameObject board = GameObject.FindGameObjectWithTag("Board");
+        //遍历格子
+        for (int i = 0; i < board.transform.childCount; i++)
+        {
+            //获取格子
+            GameObject cube = board.transform.GetChild(i).gameObject;
+            cube.transform.localPosition =
+                new Vector3(Mathf.Round(cube.transform.localPosition.x),
+                cube.transform.localPosition.y,
+                Mathf.Round(cube.transform.localPosition.z));
+        }
+    }
     [MenuItem("SimpleTool/CreateBoardItemToJson（把棋盘转成Json）")]
     private static void CreateBoardItem()
     {
@@ -82,10 +98,7 @@ public class SImpleTool : Editor
             //父类路径
             string path = AssetDatabase.GetAssetPath(prefabs);
             //创建CubeItem
-            Vector3 v3 = new Vector3(Mathf.Round(cube.transform.position.x),
-                cube.transform.position.y,
-                Mathf.Round(cube.transform.position.z));
-            CubeItem cubeItem = new CubeItem(v3, cube.transform.rotation, path);
+            CubeItem cubeItem = new CubeItem(cube.transform.position, cube.transform.rotation, path);
             //添加
             AllCube.Add(cubeItem);
         }
