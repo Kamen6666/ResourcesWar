@@ -64,7 +64,7 @@ public class SImpleTool : Editor
     //文件名字
     private static string TextName = "BoardJsonText";
     //文件路径
-    private static string TextPath = Application.dataPath + "/" + TextName + ".txt";
+    private static string TextPath = Application.dataPath + "/" + TextName + ".json";
     [MenuItem("SimpleTool/CreateBoardItemToJson（把棋盘转成Json）")]
     private static void CreateBoardItem()
     {
