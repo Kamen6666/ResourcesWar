@@ -28,7 +28,7 @@ public class Item
    public enum ItemType
    {
       Consumable,
-      Equioment,
+      Equipment,
       Weapon,
       Materail
    }

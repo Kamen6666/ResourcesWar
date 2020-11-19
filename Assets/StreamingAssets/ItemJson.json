@@ -1,0 +1,78 @@
+[
+    {
+        "//":"----------------消耗品----------------------",
+        "id":1,
+        "name":"回复剂",
+        "type":"Consumable",
+        "quality":"Common",
+        "description":"回复25生命值",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Consumable/Potion",
+        "hp":25,
+        "mp":0
+    },
+    {
+        "id":2,
+        "name":"大回复剂",
+        "type":"Consumable",
+        "quality":"Common",
+        "description":"回复50生命值",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Consumable/Hi-Potion",
+        "hp":50,
+        "mp":0
+    },
+    {
+        "id":3,
+        "name":"乙醚",
+        "type":"Consumable",
+        "quality":"Common",
+        "description":"回复75魔力值",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Consumable/Ether",
+        "hp":0,
+        "mp":75
+    },
+    {
+        "id":4,
+        "name":"少女之吻",
+        "type":"Consumable",
+        "quality":"Common",
+        "description":"回复75魔力值，75生命值",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Consumable/Maiden Kiss",
+        "hp":75,
+        "mp":75
+    },
+	{
+		"//":"--------------------装备类------------------"
+		"id":5,
+        "name":"麻布长袍",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加15物理防御，22魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Hempen Robe",
+		"physical_Damage":
+		"magical_Damage":
+		"physical_Defence"
+	},
+	{
+		"id":6,
+        "name":"丝袍",
+        "type":"Equipment",
+        "quality":"Epic",
+        "description":"增加15物理防御，28魔法防御",
+        "buyPrice":10,
+        "sellPrice":5,
+        "sprite":"Sprites/Items/Maiden Kiss",
+	}
+	
+	
+	
+]
