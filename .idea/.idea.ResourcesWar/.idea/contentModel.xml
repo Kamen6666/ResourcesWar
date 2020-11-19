@@ -9,196 +9,24 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="BoardJsonText.txt" t="Include" />
+        <e p="_ZYX" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Item" t="Include">
+              <e p="Consumable.cs" t="Include" />
+              <e p="Equioment.cs" t="Include" />
+              <e p="Item.cs" t="Include" />
+              <e p="Material.cs" t="Include" />
+              <e p="Weapon.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Editor" t="Include">
           <e p="SImpleTool(1).cs" t="Include" />
         </e>
+        <e p="Fantasy Skybox FREE" t="Include">
+          <e p="Readme.txt" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
-          <e p="AstarPathfindingProject" t="Include">
-            <e p="changelog.cs" t="Include" />
-            <e p="Core" t="Include">
-              <e p="AI" t="Include">
-                <e p="AIPath.cs" t="Include" />
-                <e p="NavmeshController.cs" t="Include" />
-                <e p="RichAI.cs" t="Include" />
-                <e p="RichPath.cs" t="Include" />
-                <e p="Seeker.cs" t="Include" />
-              </e>
-              <e p="astarclasses.cs" t="Include" />
-              <e p="AstarData.cs" t="Include" />
-              <e p="AstarMath.cs" t="Include" />
-              <e p="AstarPath.cs" t="Include" />
-              <e p="GraphUpdateScene.cs" t="Include" />
-              <e p="GraphUpdateShape.cs" t="Include" />
-              <e p="Misc" t="Include">
-                <e p="AnimationLink.cs" t="Include" />
-                <e p="AstarDebugger.cs" t="Include" />
-                <e p="AstarEnumFlagAttr.cs" t="Include" />
-                <e p="BinaryHeap.cs" t="Include" />
-                <e p="GraphEditorBase.cs" t="Include" />
-                <e p="GraphModifier.cs" t="Include" />
-                <e p="Int3.cs" t="Include" />
-                <e p="ListPool.cs" t="Include" />
-                <e p="NodeLink.cs" t="Include" />
-                <e p="NodeLink2.cs" t="Include" />
-                <e p="NodeLink3.cs" t="Include" />
-                <e p="ObjectPool.cs" t="Include" />
-                <e p="PathPool.cs" t="Include" />
-                <e p="StackPool.cs" t="Include" />
-                <e p="ThreadControlQueue.cs" t="Include" />
-                <e p="WindowsStoreCompatibility.cs" t="Include" />
-              </e>
-              <e p="Nodes" t="Include">
-                <e p="GraphNode.cs" t="Include" />
-              </e>
-              <e p="Path.cs" t="Include" />
-              <e p="PathHandler.cs" t="Include" />
-              <e p="RVO" t="Include">
-                <e p="RVOAgent.cs" t="Include" />
-                <e p="RVOCoreObstacle.cs" t="Include" />
-                <e p="RVOCoreSimulator.cs" t="Include" />
-                <e p="RVOLine.cs" t="Include" />
-                <e p="RVOQuadtree.cs" t="Include" />
-              </e>
-              <e p="Serialization" t="Include">
-                <e p="JsonConverters.cs" t="Include" />
-                <e p="JsonSerializer.cs" t="Include" />
-                <e p="SimpleJsonReplacement.cs" t="Include" />
-                <e p="SimpleZipReplacement.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Editor" t="Include">
-              <e p="AnimationLinkEditor.cs" t="Include" />
-              <e p="AstarPathEditor.cs" t="Include" />
-              <e p="AstarUpdateChecker.cs" t="Include" />
-              <e p="AstarUpdateWindow.cs" t="Include" />
-              <e p="CustomGraphEditorAttribute.cs" t="Include" />
-              <e p="EditorAssets" t="Include">
-                <e p="Materials" t="Include">
-                  <e p="Navmesh2.shader" t="Include" />
-                </e>
-              </e>
-              <e p="EditorGUIx.cs" t="Include" />
-              <e p="EditorUtilities.cs" t="Include" />
-              <e p="GraphEditors" t="Include">
-                <e p="GraphEditor.cs" t="Include" />
-                <e p="GridGeneratorEditor.cs" t="Include" />
-                <e p="LayerGridGraphEditor.cs" t="Include" />
-                <e p="NavMeshGeneratorEditor.cs" t="Include" />
-                <e p="PointGeneratorEditor.cs" t="Include" />
-                <e p="RecastGraphEditor.cs" t="Include" />
-              </e>
-              <e p="GraphUpdateSceneEditor.cs" t="Include" />
-              <e p="Misc" t="Include">
-                <e p="AstarEnumFlagDrawer.cs" t="Include" />
-              </e>
-              <e p="ModifierEditors" t="Include">
-                <e p="RaycastModifierEditor.cs" t="Include" />
-                <e p="SmoothModifierEditor.cs" t="Include" />
-              </e>
-              <e p="OptimizationHandler.cs" t="Include" />
-              <e p="RecastMeshObjEditor.cs" t="Include" />
-              <e p="RVONavmeshEditor.cs" t="Include" />
-              <e p="RVOSimulatorEditor.cs" t="Include" />
-              <e p="RVOSquareObstacleEditor.cs" t="Include" />
-              <e p="SeekerEditor.cs" t="Include" />
-              <e p="WelcomeScreen.cs" t="Include" />
-            </e>
-            <e p="Generators" t="Include">
-              <e p="Base.cs" t="Include" />
-              <e p="GridGenerator.cs" t="Include" />
-              <e p="LayerGridGraphGenerator.cs" t="Include" />
-              <e p="NavMeshGenerator.cs" t="Include" />
-              <e p="NodeClasses" t="Include">
-                <e p="GridNode.cs" t="Include" />
-                <e p="PointNode.cs" t="Include" />
-                <e p="TriangleMeshNode.cs" t="Include" />
-              </e>
-              <e p="PointGenerator.cs" t="Include" />
-              <e p="QuadtreeGraph.cs" t="Include" />
-              <e p="RecastGenerator.cs" t="Include" />
-              <e p="Utilities" t="Include">
-                <e p="BBTree.cs" t="Include" />
-                <e p="EuclideanEmbedding.cs" t="Include" />
-                <e p="NavMeshRenderer.cs" t="Include" />
-                <e p="ObjImporter.cs" t="Include" />
-                <e p="RecastBBTree.cs" t="Include" />
-                <e p="RecastMeshObj.cs" t="Include" />
-                <e p="TileHandler.cs" t="Include" />
-                <e p="Voxels" t="Include">
-                  <e p="DebugUtility.cs" t="Include" />
-                  <e p="VoxelClasses.cs" t="Include" />
-                  <e p="VoxelContour.cs" t="Include" />
-                  <e p="VoxelMesh.cs" t="Include" />
-                  <e p="VoxelRasterization.cs" t="Include" />
-                  <e p="VoxelRegion.cs" t="Include" />
-                  <e p="VoxelUtility.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="link.xml" t="Include" />
-            <e p="Modifiers" t="Include">
-              <e p="AdvancedSmooth.cs" t="Include" />
-              <e p="AlternativePath.cs" t="Include" />
-              <e p="FunnelModifier.cs" t="Include" />
-              <e p="Modifiers.cs" t="Include" />
-              <e p="RadiusModifier.cs" t="Include" />
-              <e p="RaycastModifier.cs" t="Include" />
-              <e p="SimpleSmoothModifier.cs" t="Include" />
-              <e p="StartEndModifier.cs" t="Include" />
-            </e>
-            <e p="Navmesh" t="Include">
-              <e p="NavmeshAdd.cs" t="Include" />
-              <e p="NavmeshCut.cs" t="Include" />
-              <e p="RelevantGraphSurface.cs" t="Include" />
-              <e p="TileHandlerHelper.cs" t="Include" />
-            </e>
-            <e p="Pathfinders" t="Include">
-              <e p="ABPath.cs" t="Include" />
-              <e p="ConstantPath.cs" t="Include" />
-              <e p="FleePath.cs" t="Include" />
-              <e p="FloodPath.cs" t="Include" />
-              <e p="FloodPathTracer.cs" t="Include" />
-              <e p="MultiTargetPath.cs" t="Include" />
-              <e p="RandomPath.cs" t="Include" />
-              <e p="XPath.cs" t="Include" />
-            </e>
-            <e p="Plugins" t="Include">
-              <e p="Clipper" t="Include">
-                <e p="ClipperLicense.txt" t="Include" />
-              </e>
-              <e p="dependencies.txt" t="Include" />
-              <e p="DotNetZip" t="Include">
-                <e p="DotNetZipLicense.txt" t="Include" />
-              </e>
-              <e p="JsonFx" t="Include">
-                <e p="JsonFxLicense.txt" t="Include" />
-                <e p="Readme.txt" t="Include" />
-              </e>
-              <e p="Poly2Tri" t="Include">
-                <e p="Poly2TriLicense.txt" t="Include" />
-              </e>
-            </e>
-            <e p="RVO" t="Include">
-              <e p="RVOController.cs" t="Include" />
-              <e p="RVONavmesh.cs" t="Include" />
-              <e p="RVOObstacle.cs" t="Include" />
-              <e p="RVOSimulator.cs" t="Include" />
-              <e p="RVOSquareObstacle.cs" t="Include" />
-            </e>
-            <e p="Utilities" t="Include">
-              <e p="AstarChecksum.cs" t="Include" />
-              <e p="AstarMemory.cs" t="Include" />
-              <e p="AstarParallel.cs" t="Include" />
-              <e p="AstarProfiler.cs" t="Include" />
-              <e p="DotNetReplacements.cs" t="Include" />
-              <e p="GraphUpdateUtilities.cs" t="Include" />
-              <e p="LockFreeStack.cs" t="Include" />
-              <e p="PathUtilities.cs" t="Include" />
-              <e p="ProfileHelper.cs" t="Include" />
-              <e p="UnityReferenceHelper.cs" t="Include" />
-            </e>
-          </e>
           <e p="MeshBaker" t="Include">
             <e p="Readme.txt" t="Include" />
             <e p="Release Notes.txt" t="Include" />
@@ -543,15 +371,6 @@
               </e>
             </e>
           </e>
-        </e>
-        <e p="Scripts" t="Include">
-          <e p="Item" t="Include">
-            <e p="Consumable.cs" t="Include" />
-            <e p="Equioment.cs" t="Include" />
-            <e p="Item.cs" t="Include" />
-            <e p="Weapon.cs" t="Include" />
-          </e>
-          <e p="TestGit.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

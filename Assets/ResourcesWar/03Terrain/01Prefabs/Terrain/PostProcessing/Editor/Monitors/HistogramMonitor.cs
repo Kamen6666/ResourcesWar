@@ -12,7 +12,7 @@ namespace UnityEditor.PostProcessing
 
         ComputeShader m_ComputeShader;
         ComputeBuffer m_Buffer;
-        Material m_Material;
+        UnityEngine.Material m_Material;
         RenderTexture m_HistogramTexture;
         Rect m_MonitorAreaRect;
 
@@ -276,7 +276,7 @@ namespace UnityEditor.PostProcessing
 
             if (m_Material == null)
             {
-                m_Material = new Material(Shader.Find("Hidden/Post FX/Monitors/Histogram Render")) { hideFlags = HideFlags.DontSave };
+                m_Material = new UnityEngine.Material(Shader.Find("Hidden/Post FX/Monitors/Histogram Render")) { hideFlags = HideFlags.DontSave };
             }
 
             var channels = Vector4.zero;

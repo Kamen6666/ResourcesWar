@@ -10,7 +10,7 @@ namespace UnityEditor.PostProcessing
 
         ComputeShader m_ComputeShader;
         ComputeBuffer m_Buffer;
-        Material m_Material;
+        UnityEngine.Material m_Material;
         RenderTexture m_WaveformTexture;
         Rect m_MonitorAreaRect;
 
@@ -270,7 +270,7 @@ namespace UnityEditor.PostProcessing
             }
 
             if (m_Material == null)
-                m_Material = new Material(Shader.Find("Hidden/Post FX/Monitors/Waveform Render")) { hideFlags = HideFlags.DontSave };
+                m_Material = new UnityEngine.Material(Shader.Find("Hidden/Post FX/Monitors/Waveform Render")) { hideFlags = HideFlags.DontSave };
 
             m_Material.SetBuffer("_Waveform", m_Buffer);
             m_Material.SetVector("_Size", new Vector2(m_WaveformTexture.width, m_WaveformTexture.height));

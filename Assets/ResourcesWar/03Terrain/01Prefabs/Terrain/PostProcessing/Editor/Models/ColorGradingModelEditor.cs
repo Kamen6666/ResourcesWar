@@ -463,7 +463,7 @@ namespace UnityEditor.PostProcessing
             return GUI.Toggle(rect, value, name, EditorStyles.toolbarButton);
         }
 
-        static Material s_MaterialSpline;
+        static UnityEngine.Material s_MaterialSpline;
 
         void DoCurvesGUI()
         {
@@ -568,7 +568,7 @@ namespace UnityEditor.PostProcessing
                     EditorGUI.DrawRect(rect, new Color(0.15f, 0.15f, 0.15f, 1f));
 
                     if (s_MaterialSpline == null)
-                        s_MaterialSpline = new Material(Shader.Find("Hidden/Post FX/UI/Curve Background")) { hideFlags = HideFlags.HideAndDontSave };
+                        s_MaterialSpline = new UnityEngine.Material(Shader.Find("Hidden/Post FX/UI/Curve Background")) { hideFlags = HideFlags.HideAndDontSave };
 
                     if (curveEditingId == 1 || curveEditingId == 2)
                         DrawBackgroundTexture(innerRect, 0);
