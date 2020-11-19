@@ -35,18 +35,26 @@ public class Weapon : Item
 
     public enum WeaponType
     {
-        MianHand,
+        MainHand,
         OffHand
     }
 
   
     public int Physical_Damage { get; set; }
     public int Magical_Damage { get; set; }
+    public int attackRange = 1;
+
+    public int AttackRange
+    {
+        get { return attackRange;}
+        set { attackRange = value; }
+    }
     
     public WeaponType weaponType { get; set; }
     public ProfessionalType professionalType { get; set; }
     public Weapon(int id, string name, ItemType itemType, Quality quality, string description, int buyPrice, 
-        int sellPrice, string sprite,int physicalDamage,int magicalDamage,WeaponType weaponType,ProfessionalType professionalType) : 
+        int sellPrice, string sprite,int physicalDamage,int magicalDamage,WeaponType weaponType,ProfessionalType professionalType,
+        int attackRange=1) : 
         base(id, name, itemType, quality, description, buyPrice, sellPrice, sprite)
     {
 
@@ -54,6 +62,7 @@ public class Weapon : Item
         this.Magical_Damage = magicalDamage;
         this.weaponType = weaponType;
         this.professionalType = professionalType;
+        this.AttackRange = attackRange;
 
     }
 }

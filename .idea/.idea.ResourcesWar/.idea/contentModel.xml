@@ -9,8 +9,17 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_LX" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="SkillData.cs" t="Include" />
+            <e p="SkillManager.cs" t="Include" />
+            <e p="SkillsButton.cs" t="Include" />
+          </e>
+        </e>
         <e p="_ZYX" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Inventory.cs" t="Include" />
+            <e p="InventoryManager.cs" t="Include" />
             <e p="Item" t="Include">
               <e p="Consumable.cs" t="Include" />
               <e p="Equipment.cs" t="Include" />
@@ -23,9 +32,6 @@
         <e p="Editor" t="Include">
           <e p="CopyHierarchy.cs" t="Include" />
           <e p="SImpleTool(1).cs" t="Include" />
-        </e>
-        <e p="Fantasy Skybox FREE" t="Include">
-          <e p="Readme.txt" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="MeshBaker" t="Include">
@@ -190,7 +196,6 @@
                 <e p="Demo" t="Include">
                   <e p="Scripts" t="Include">
                     <e p="LoadSceneByName.cs" t="Include" />
-                    <e p="Test.cs" t="Include" />
                   </e>
                 </e>
                 <e p="PostProcessing" t="Include">
@@ -371,6 +376,30 @@
                 </e>
               </e>
             </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="UIFrame" t="Include">
+            <e p="AutoCreate.cs" t="Include" />
+            <e p="JsonParseClasses.cs" t="Include" />
+            <e p="SystemDefine.cs" t="Include" />
+            <e p="UIConfigurationManager.cs" t="Include" />
+            <e p="UIControllerBase.cs" t="Include" />
+            <e p="UILocalizationTextManager.cs" t="Include" />
+            <e p="UILocalText.cs" t="Include" />
+            <e p="UIManager.cs" t="Include" />
+            <e p="UIModuleBase.cs" t="Include" />
+            <e p="UISubModuleBase.cs" t="Include" />
+            <e p="UIWidgetsBase.cs" t="Include" />
+          </e>
+          <e p="Utilty" t="Include">
+            <e p="AssetsManager.cs" t="Include" />
+            <e p="EventCenter.cs" t="Include" />
+            <e p="ObjectByPool.cs" t="Include" />
+            <e p="ObjectPool.cs" t="Include" />
+            <e p="ReflectionManager.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+            <e p="Tool.cs" t="Include" />
           </e>
         </e>
       </e>
