@@ -8,7 +8,7 @@ namespace UnityEditor.PostProcessing
     [CustomPropertyDrawer(typeof(TrackballGroupAttribute))]
     sealed class TrackballGroupDrawer : PropertyDrawer
     {
-        static Material s_Material;
+        static UnityEngine.Material s_Material;
 
         const int k_MinWheelSize = 80;
         const int k_MaxWheelSize = 256;
@@ -31,7 +31,7 @@ namespace UnityEditor.PostProcessing
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (s_Material == null)
-                s_Material = new Material(Shader.Find("Hidden/Post FX/UI/Trackball")) { hideFlags = HideFlags.HideAndDontSave };
+                s_Material = new UnityEngine.Material(Shader.Find("Hidden/Post FX/UI/Trackball")) { hideFlags = HideFlags.HideAndDontSave };
 
             position = new Rect(position.x, position.y, position.width / 3f, position.height);
             int size = m_Size;
