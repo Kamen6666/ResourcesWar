@@ -13,7 +13,7 @@
           <e p="Scripts" t="Include">
             <e p="Item" t="Include">
               <e p="Consumable.cs" t="Include" />
-              <e p="Equioment.cs" t="Include" />
+              <e p="Equipment.cs" t="Include" />
               <e p="Item.cs" t="Include" />
               <e p="Material.cs" t="Include" />
               <e p="Weapon.cs" t="Include" />
@@ -21,6 +21,7 @@
           </e>
         </e>
         <e p="Editor" t="Include">
+          <e p="CopyHierarchy.cs" t="Include" />
           <e p="SImpleTool(1).cs" t="Include" />
         </e>
         <e p="Fantasy Skybox FREE" t="Include">

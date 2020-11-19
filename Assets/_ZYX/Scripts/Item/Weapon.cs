@@ -32,16 +32,27 @@ public class Weapon : Item
         
         
     }
+
+    public enum WeaponType
+    {
+        MianHand,
+        OffHand
+    }
+
+  
     public int Physical_Damage { get; set; }
     public int Magical_Damage { get; set; }
+    
+    public WeaponType weaponType { get; set; }
     public ProfessionalType professionalType { get; set; }
     public Weapon(int id, string name, ItemType itemType, Quality quality, string description, int buyPrice, 
-        int sellPrice, string sprite,int physicalDamage,int magicalDamage,ProfessionalType professionalType) : 
+        int sellPrice, string sprite,int physicalDamage,int magicalDamage,WeaponType weaponType,ProfessionalType professionalType) : 
         base(id, name, itemType, quality, description, buyPrice, sellPrice, sprite)
     {
 
         this.Physical_Damage = physicalDamage;
         this.Magical_Damage = magicalDamage;
+        this.weaponType = weaponType;
         this.professionalType = professionalType;
 
     }
