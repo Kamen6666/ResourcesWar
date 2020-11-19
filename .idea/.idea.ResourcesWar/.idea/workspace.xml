@@ -13,6 +13,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SImpleTool(1).cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556F6DF1-3FB5-4CD9-A7C2-B976BBB72AEA/f9/f6208fa5/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item/Consumable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item/Equioment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556F6DF1-3FB5-4CD9-A7C2-B976BBB72AEA/85/5a1adc1c/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -21,6 +24,9 @@
         <option value="$PROJECT_DIR$/Assets/Editor/SImpleTool(1).cs" />
         <option value="$PROJECT_DIR$/Assets/StreamingAssets/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/Consumable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/Equioment.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item/Weapon.cs" />
       </list>
     </option>
   </component>
@@ -56,6 +62,7 @@
       <workItem from="1605668058947" duration="4154000" />
       <workItem from="1605754463249" duration="33000" />
       <workItem from="1605755434505" duration="1854000" />
+      <workItem from="1605767607399" duration="1424000" />
     </task>
     <servers />
   </component>

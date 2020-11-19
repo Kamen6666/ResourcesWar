@@ -19,6 +19,10 @@ public class Item
       this.Name = name;
       this.itemType = itemType;
       this.quality = quality;
+      this.Description = description;
+      this.BuyPrice = buyPrice;
+      this.SellPrice = sellPrice;
+      this.Sprite = sprite;
    }
 
    public enum ItemType
