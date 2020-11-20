@@ -15,16 +15,21 @@ public class InventoryManager : MonoBehaviour
     }
 
     #endregion
-    
+    /// <summary>
+    /// 物品列表
+    /// </summary>
     public List<Item> itemList;
     
     
     private void Start()
     {
         ParseItemJson();
+        Show(10);
     }
-    
-    private void ParseItemJson()
+
+    #region 解析json数据
+
+       private void ParseItemJson()
     {
        itemList=new List<Item>();
 
@@ -35,7 +40,7 @@ public class InventoryManager : MonoBehaviour
 
        for (int i = 0; i < itemdata.Count; i++)
        {
-           Debug.Log("i======"+i);
+//           Debug.Log("i======"+i);
            int id = (int) itemdata[i]["id"];
            string name = itemdata[i]["name"].ToString();
            string typeStr = itemdata[i]["type"].ToString();
@@ -91,4 +96,20 @@ public class InventoryManager : MonoBehaviour
 
        }
     }
+
+    #endregion
+
+    private void Show(int id)
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (i==id)
+            {
+                Debug.Log(itemList[i].ID+"|"+itemList[i].Name+"|"+itemList[i].itemType+"|"+itemList[i].quality
+                +"|"+itemList[i].Description+"|"+itemList[i].BuyPrice+"|"+itemList[i].SellPrice+"|"+itemList[i].Sprite);
+            }
+           
+        }
+    }
+    
 }

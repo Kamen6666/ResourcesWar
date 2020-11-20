@@ -39,6 +39,7 @@
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/Item/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/InventoryManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/InventoryManager.cs" />
       </list>
     </option>
   </component>
@@ -77,6 +78,7 @@
       <workItem from="1605767607399" duration="3120000" />
       <workItem from="1605771196441" duration="14904000" />
       <workItem from="1605793191289" duration="154000" />
+      <workItem from="1605793449882" duration="3802000" />
     </task>
     <servers />
   </component>
@@ -91,6 +93,10 @@
       <screen x="66" y="1080" width="1854" height="1080" />
     </state>
     <state x="478" y="1310" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1605785967428" />
+    <state x="284" y="157" width="1115" height="914" key="dock-window-1" timestamp="1605842730924">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="284" y="157" width="1115" height="914" key="dock-window-1/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1605842730924" />
     <state x="551" y="1436" width="672" height="678" key="search.everywhere.popup" timestamp="1605790934427">
       <screen x="66" y="1080" width="1854" height="1080" />
     </state>
