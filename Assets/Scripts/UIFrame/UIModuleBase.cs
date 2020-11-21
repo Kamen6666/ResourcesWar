@@ -14,6 +14,8 @@ namespace UIFrame
     {
         public UIModuleType uIModuleType = UIModuleType.SingleControl;
         public Dictionary<string, UIWidgetsBase> _uiWidgets;
+        public Dictionary<string, UIWidgetsBase> _uiSecondWidgets;
+        UIWidgetsBase[] secondWidgets;
 
         [Header("当前模块重要元件所添加的脚本名称")]
         //当前元件脚本
@@ -23,8 +25,10 @@ namespace UIFrame
         protected virtual void Awake()
         {
             _uiWidgets = new Dictionary<string, UIWidgetsBase>();
+            _uiSecondWidgets = new Dictionary<string, UIWidgetsBase>();
             _canvasGroup = GetComponent<CanvasGroup>();
             LoadImportentWidgetsAndAddLocalization();
+            LoadSecondImportentWidgets();
             if (SystemDefine.UseLocalization)
             {
                 InitModuleLanguage();
@@ -126,8 +130,44 @@ namespace UIFrame
                 
             }
         }
+        private void LoadSecondImportentWidgets()
+        {
+            //当前widget是否继承基类或者就是基类本身
+            if (!ReflectionManager.GetInstance().TypeIsExtentOrEquel
+                (currentModuleWidgetScript, "UIWidgetsBase"))
+            {
+                //命名不存在，依旧使用基类组件
+                currentModuleWidgetScript = "UIFrame.UIWidgetsBase";
+            }
+            //获取当前对象的所有子对象
+            Transform[] allChild = transform.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < allChild.Length; i++)
+            {
+                //判断子对象是否为该符号结尾
+                if (allChild[i].name.EndsWith(SystemDefine.SECONDWIDGETS_TOKEN))
+                {
+                    //获取脚本组件
+                    UIWidgetsBase uiWidget = allChild[i].gameObject.AddComponent(
+                        Type.GetType(currentModuleWidgetScript)) as UIWidgetsBase;
+                    //设置Widgets归属为当前模块
+                    uiWidget._currentModule = this;
+                    //添加到字典
+                    _uiSecondWidgets.Add(allChild[i].name, uiWidget);
+                   // break;
+                }
+            }
+        }
+        public UIWidgetsBase[] GetSecondWidgets()
+        {
 
-        private void AddLocalizationTextComponent(Transform child)
+            if (secondWidgets == null)
+            {
+                secondWidgets = new UIWidgetsBase[_uiSecondWidgets.Values.Count];
+                _uiSecondWidgets.Values.CopyTo(secondWidgets, 0);
+            }
+            return  secondWidgets;
+        }
+       private void AddLocalizationTextComponent(Transform child)
         {
             //该组件没有Text 返回
             if (child.GetComponent<Text>() == null)
@@ -155,7 +195,15 @@ namespace UIFrame
             }
             return _uiWidgets[widgetName];
         }
-
+        public UIWidgetsBase FindCurrentModuleSecondWidget(string widgetName)
+        {
+            if (!_uiSecondWidgets.ContainsKey(widgetName))
+            {
+                Debug.LogError($"查找的{widgetName}不存在");
+                return null;
+            }
+            return _uiSecondWidgets[widgetName];
+        }
         public void UnRegisterWidget(string widgetName)
         {
             if (!_uiWidgets.ContainsKey(widgetName))

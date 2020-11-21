@@ -10,11 +10,12 @@
         /// <summary>
         /// 模块路径配置表
         /// </summary>
-        public const string UIPanelConfigPath = "Configuration/ModulePathConfig";
+        public const string UIPanelConfigPath = "LX/UI/Configuration/ModulePathConfig";
         public const string UITextLocalizationConfigPath = "Configuration/LocalizationTexts";
-        public const string UIWidgetConfigPath = "Configuration/WidgetPathConfig";
+        public const string UIWidgetConfigPath = "LX/UI/Configuration/WidgetPathConfig";
         //重要UI元素的末尾标记
         public static string[] IMPROTANT_WIDGET_TOKEN;
+        public const string SECONDWIDGETS_TOKEN = "~";
         public const string PLAYERPREFS_LANGUAGEID = "LanguagesID";
         public const bool UseLocalization = false;
         /// <summary>
