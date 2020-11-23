@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
-  m_Name: 03
+  m_Name: 1
   m_EditorClassIdentifier: 
-  SkillID: 3
-  skillSprite: {fileID: 21300000, guid: 0dca37edb78974f7d9e256c8e5c75a1e, type: 3}
-  skillName: Frost_Spell
+  SkillID: 1
+  skillSprite: {fileID: 21300000, guid: b4cf912984d2aba4aae84f325f018142, type: 3}
+  skillName: Wizard_Spatial
   skillLevel: 0
   skillDes: 123123
   isUnlock: 0
-  preSkills:
-  - {fileID: 11400000, guid: ee07dfc566ff83e4290ed048d4dfcb65, type: 2}
+  preSkills: []

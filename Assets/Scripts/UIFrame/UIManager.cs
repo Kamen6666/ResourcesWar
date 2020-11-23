@@ -131,14 +131,12 @@ namespace UIFrame
         /// </summary>
         /// <param name="moduleName">模块名字</param>
         /// <param name="localPos">初始化模块时，模块生成坐标</param>
-        public void VagueOpenModule(string moduleName,Vector2? localPos)
+        private void VagueOpenModule(string moduleName,Vector2? localPos)
         {
             
             if (localPos == null)
             {
                 LoadModule(moduleName);
-
-
             }
             else
             {
@@ -163,13 +161,13 @@ namespace UIFrame
         #region 单窗口管理
         public void PushModule(string moduleName)
         {
-           // LoadModule(moduleName,Vector2.zero);
-            //if (_uiModules[moduleName].uIModuleType == UIModuleType.MultipleControl)
-            //{
-            //    Debug.LogError("请选多窗口模式");
-            //    UnLoadModule(moduleName);
-            //    return;
-            //}
+            LoadModule(moduleName, Vector2.zero);
+            if (_uiModules[moduleName].uIModuleType == UIModuleType.MultipleControl)
+            {
+                Debug.LogError("请选多窗口模式");
+                UnLoadModule(moduleName);
+                return;
+            }
 
             //如果栈不为空
             if (_uiModuleStack.Count != 0)

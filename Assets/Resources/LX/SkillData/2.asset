@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
-  m_Name: 05
+  m_Name: 2
   m_EditorClassIdentifier: 
-  SkillID: 5
-  skillSprite: {fileID: 21300000, guid: bd342816b57b5e84ba38a25226148b7a, type: 3}
-  skillName: Archer_lunge
+  SkillID: 2
+  skillSprite: {fileID: 21300000, guid: 6391dbee6a9d04943ae02a5040840a88, type: 3}
+  skillName: Fantasy_Spell
   skillLevel: 0
   skillDes: 123123
   isUnlock: 0
   preSkills:
-  - {fileID: 11400000, guid: 7eaf5218be368454eb216629b080076e, type: 2}
-  - {fileID: 11400000, guid: 1a9a4c86ee5410e44a6ef6c8518e376f, type: 2}
-  - {fileID: 11400000, guid: eb12a88758e60e54fb455e5130b998ed, type: 2}
+  - {fileID: 11400000, guid: ee07dfc566ff83e4290ed048d4dfcb65, type: 2}
