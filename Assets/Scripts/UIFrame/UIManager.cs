@@ -161,7 +161,7 @@ namespace UIFrame
         #endregion
 
         #region 单窗口管理
-        private void PushModule(string moduleName)
+        public void PushModule(string moduleName)
         {
            // LoadModule(moduleName,Vector2.zero);
             //if (_uiModules[moduleName].uIModuleType == UIModuleType.MultipleControl)

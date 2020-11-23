@@ -1,0 +1,16 @@
+{
+  "UIPanels": [
+    {
+      "PanelName": "LoginPanel",
+      "PanelPath": "UIPanel/LoginPanel"
+    },
+    {
+      "PanelName": "RegisterPanel",
+      "PanelPath": "UIPanel/RegisterPanel"
+    },
+    {
+      "PanelName": "CreatePanel",
+      "PanelPath": "UIPanel/CreatePanel"
+    }
+  ]
+}
