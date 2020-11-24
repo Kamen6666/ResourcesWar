@@ -61,7 +61,7 @@ public class PhotonManager : MonoSingleton<PhotonManager> ,IPhotonPeerListener
     /// <summary>
     /// IP地址
     /// </summary>
-    private string serverAddress = "127.0.0.1:5055";
+    private string serverAddress = "10.9.75.220:5055";
     
     /// <summary>
     /// 服务器给客户端的响应
