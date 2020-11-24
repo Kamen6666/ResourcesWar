@@ -21,12 +21,12 @@ public class LoginPanel : UIModuleBase
     public override void OnOpen()
     {
         base.OnOpen();
-        _animator.SetBool("Open",true);
+        _animator.SetBool("Show",true);
     }
     
     public override void OnClose()
     {
         base.OnClose();
-        _animator.SetBool("Open",false);
+        _animator.SetBool("Show",false);
     }
 }

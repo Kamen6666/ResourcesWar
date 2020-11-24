@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UIFrame;
 using ExitGames.Client.Photon;
 using MobaCommon.Code;
 using UnityEngine;
@@ -44,9 +43,10 @@ public class AccountReceiver : MonoBehaviour,IReceiver
         {
             case 0:
                 //隐藏登录面板
-                
-                //显示主面板面板
-
+                UIManager.GetInstance().CloseModule("InitPanel");
+                UIManager.GetInstance().CloseModule("LoginPanel");
+                //加载主界面
+                UIManager.GetInstance().VagueOpenModule("MainPanel",null); 
                 //发送获取角色信息请求
                 PhotonManager.GetInstance.OnRequste(OpCode.PlayerCode,OpPlayer.GetInfo);
                 break;

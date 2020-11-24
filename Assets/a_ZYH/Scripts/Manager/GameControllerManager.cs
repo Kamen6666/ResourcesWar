@@ -9,8 +9,6 @@ public class GameControllerManager : MonoBehaviour
     private void Start()
     {
         //显示主面板
-        UIManager.GetInstance().VagueOpenModule("MainPanel",null);
-        //显示登录面板
-        UIManager.GetInstance().VagueOpenModule("LoginPanel",null);
+        UIManager.GetInstance().VagueOpenModule("InitPanel",null);
     }
 }

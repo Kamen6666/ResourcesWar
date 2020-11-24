@@ -131,7 +131,7 @@ namespace UIFrame
         /// </summary>
         /// <param name="moduleName">模块名字</param>
         /// <param name="localPos">初始化模块时，模块生成坐标</param>
-        private void VagueOpenModule(string moduleName,Vector2? localPos)
+        public void VagueOpenModule(string moduleName,Vector2? localPos)
         {
             
             if (localPos == null)
