@@ -9,16 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
   m_Name: 10
   m_EditorClassIdentifier: 
   SkillID: 10
-  skillSprite: {fileID: 21300000, guid: 6d391596b8882c14baaaa20cd313e841, type: 3}
-  skillName: Thief_Hiding
+  skillSprite: {fileID: 21300000, guid: 155e8c50ab9a9af4badea90f5c775f00, type: 3}
+  skillName: "\u7981\u5492\uFF1A\u9F99\u5492"
   skillLevel: 0
-  skillDes: 123123
+  skillDes: "\u53EC\u5524\u795E\u9F99"
   isUnlock: 0
   preSkills:
-  - {fileID: 11400000, guid: 4c4f0f3b2581a4e4ba2b61bc6fc2c32b, type: 2}
-  - {fileID: 11400000, guid: c8117ffdedc9b5848acb1fec484b2f9e, type: 2}
-  - {fileID: 11400000, guid: 3082882818091a245ab1593c34ed8c4e, type: 2}
+  - {fileID: 11400000, guid: 566310fc8a9837240b9f4edc90addf07, type: 2}
+  - {fileID: 11400000, guid: 45aa1bac8e7f201428ccc1f66191f87a, type: 2}
+  - {fileID: 11400000, guid: 4852e11ebcd504c4fa36f1affa5a5eaa, type: 2}
+  maxSkillPoint: 1
+  isPassive: 0

@@ -11,7 +11,7 @@ public class SkillTree_Panel : UIModuleBase
             controller = new SkillTree_PanelController();
             BindController(controller);
         }
-        
+        //controller.Clear();
 	}
     public override void OnOpen()
     {
@@ -22,5 +22,6 @@ public class SkillTree_Panel : UIModuleBase
             BindController(controller);
         }
 		controller.Refresh();
+        //controller.Clear();
     }
 }

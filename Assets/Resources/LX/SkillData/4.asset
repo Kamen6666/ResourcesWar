@@ -9,14 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: 
   SkillID: 4
-  skillSprite: {fileID: 21300000, guid: 155e8c50ab9a9af4badea90f5c775f00, type: 3}
-  skillName: Wizard_Dragon
+  skillSprite: {fileID: -188584855565955111, guid: 1d38ab81623f9a44ebc3e4aa7b679682,
+    type: 3}
+  skillName: "\u51B0\u9525\u98CE\u66B4"
   skillLevel: 0
-  skillDes: 123123
+  skillDes: "\u5411\u524D\u65B9\u53D1\u51FA\u5927\u91CF\u51B0\u9525"
   isUnlock: 0
   preSkills:
-  - {fileID: 11400000, guid: c0d8739c56528644a85d821a56e07e1a, type: 2}
+  - {fileID: 11400000, guid: 8abfc80c62c884845b9a7ee11a2c2988, type: 2}
+  maxSkillPoint: 3
+  isPassive: 0

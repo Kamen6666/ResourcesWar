@@ -9,14 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
   m_Name: 7
   m_EditorClassIdentifier: 
   SkillID: 7
-  skillSprite: {fileID: 21300000, guid: 0c136515f7aa49e43ba0840df48c1f4d, type: 3}
-  skillName: Samurai_Flower
+  skillSprite: {fileID: 8561375059472198009, guid: 1d38ab81623f9a44ebc3e4aa7b679682,
+    type: 3}
+  skillName: "\u95EA\u73B0"
   skillLevel: 0
-  skillDes: 123123
+  skillDes: "\u5411\u524D\u65B9\u95EA\u73B0"
   isUnlock: 0
   preSkills:
-  - {fileID: 11400000, guid: 0a7f7d0f2dd3c294fbacbd75c84cd475, type: 2}
+  - {fileID: 11400000, guid: 526e995e5d51bd94aadebed329a9b62b, type: 2}
+  maxSkillPoint: 1
+  isPassive: 0

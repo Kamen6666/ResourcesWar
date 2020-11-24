@@ -31,91 +31,58 @@ public class SkillTree_PanelController : UIControllerBase
         _module.FindCurrentModuleSecondWidget("00_Fire Ball~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/0");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("01_transformer~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/1");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("02_Inferno~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/2");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("03_Blaze~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/3");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("04_Wolf~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/4");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("05_Recovery~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/5");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("06_Lifesteal~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/6");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
 
         });
         _module.FindCurrentModuleSecondWidget("07_Metro~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/7");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("08_Fire Dragon~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/8");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("09_Duration~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/9");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("10_Magic Power~").Button.onClick.AddListener(() =>
         {
             currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/10");
-            skillImage.sprite = currentClickData.skillSprite;
-            skillName.text = currentClickData.skillName;
-            skillLvText.text = "Skill Level : Lv " + currentClickData.skillLevel.ToString();
-            skillDesText.text = currentClickData.skillDes;
+            DisplaySkillInfo();
         });
         #endregion
         btns = _module.GetSecondWidgets();
@@ -125,10 +92,16 @@ public class SkillTree_PanelController : UIControllerBase
     public void UpgradeButton()
     {
         //点数小于0
-        if (skillPoint < 0 )
+        if (skillPoint <= 0 )
         {
             return;
-        }//前置技能不为空  && 前置技能解锁
+        }
+        //当前技能等级 >= 最大等级
+        if (currentClickData.skillLevel >= currentClickData.maxSkillPoint)
+        {
+            return;
+        }
+        //前置技能不为空  && 前置技能解锁
         if (currentClickData.preSkills.Length != 0 && CanUpdate())
         {
             UpdateSkillUI();
@@ -140,7 +113,11 @@ public class SkillTree_PanelController : UIControllerBase
     }
 
     private void UpdateSkillUI()
-    {  
+    {
+        if (currentClickData.isPassive)
+        {
+            btns[currentClickData.SkillID].transform.Find("PassiveSkillEffective").gameObject.SetActive(true);
+        }
         //更改透明度
         btns[currentClickData.SkillID].Image.color = Color.white;
         //显示右下角强化点数
@@ -192,10 +169,12 @@ public class SkillTree_PanelController : UIControllerBase
         for (int i = 0; i < btns.Length; i++)
         {
            Datas[i] = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/{i}");
-            Debug.Log(btns.Length);
-            Debug.Log($"i : {i} \n Data : {Datas[i]}" );
-            if (Datas[i].isUnlock)
+           if (Datas[i].isUnlock)
             {
+                if (Datas[i].isPassive)
+                {
+                    btns[i].transform.Find("PassiveSkillEffective").gameObject.SetActive(true);
+                }
                 btns[i].Image.color = Color.white;
                 GameObject Point = btns[i].Transform.Find("Point#").gameObject;
                 Point.SetActive(true);
@@ -206,5 +185,20 @@ public class SkillTree_PanelController : UIControllerBase
         }
         UpdatePointUI();
     }
-   
+
+    public void Clear()
+    {
+        btns = _module.GetSecondWidgets();
+        if (Datas == null)
+        {
+            Datas = new SkillData[btns.Length];
+        }
+        for (int i = 0; i < btns.Length; i++)
+        {
+            Datas[i] = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/{i}");
+            Datas[i].isUnlock = false;
+            Datas[i].skillLevel = 0;
+        }
+        UpdatePointUI();
+    }
 }

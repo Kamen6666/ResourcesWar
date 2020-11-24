@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
   SkillID: 1
-  skillSprite: {fileID: 21300000, guid: b4cf912984d2aba4aae84f325f018142, type: 3}
-  skillName: Wizard_Spatial
+  skillSprite: {fileID: 21300000, guid: 0dca37edb78974f7d9e256c8e5c75a1e, type: 3}
+  skillName: "\u51B0\u9525\u672F"
   skillLevel: 0
-  skillDes: 123123
+  skillDes: "\u5411\u76EE\u6807\u53D1\u5C04\u4E00\u679A\u51B0\u9525"
   isUnlock: 0
   preSkills: []
+  maxSkillPoint: 3
+  isPassive: 0
