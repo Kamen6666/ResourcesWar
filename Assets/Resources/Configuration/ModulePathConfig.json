@@ -1,0 +1,28 @@
+{
+  "UIPanels": [
+    {
+      "PanelName": "LoginPanel",
+      "PanelPath": "UIPanel/LoginPanel"
+    },
+    {
+      "PanelName": "RegisterPanel",
+      "PanelPath": "UIPanel/RegisterPanel"
+    },
+    {
+      "PanelName": "CreatePanel",
+      "PanelPath": "UIPanel/CreatePanel"
+    },
+    {
+      "PanelName": "InitPanel",
+      "PanelPath": "UIPanel/InitPanel"
+    },
+    {
+      "PanelName": "MainPanel",
+      "PanelPath": "UIPanel/MainPanel"
+    },
+    {
+			"PanelName": "SkillTree_Panel",
+			"PanelPath": "LX/UI/Prefabs/SkillUIPanels/SkillTree_Panel"
+		}
+  ]
+}
