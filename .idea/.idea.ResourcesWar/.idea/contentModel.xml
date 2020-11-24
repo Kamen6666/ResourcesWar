@@ -22,16 +22,33 @@
         </e>
         <e p="a_ZYX" t="Include">
           <e p="Scripts" t="Include">
+            <e p="ChangePlayer.cs" t="Include" />
+            <e p="DataMrg.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="InventoryManager.cs" t="Include" />
             <e p="Item" t="Include">
               <e p="Consumable.cs" t="Include" />
-              <e p="Equioment.cs" t="Include" />
               <e p="Equipment.cs" t="Include" />
               <e p="Item.cs" t="Include" />
               <e p="Material.cs" t="Include" />
+              <e p="PlayerItemData.cs" t="Include" />
               <e p="Weapon.cs" t="Include" />
+              <e p="ZYX_Player.cs" t="Include" />
             </e>
+            <e p="ItemUI.cs" t="Include" />
+            <e p="KnapsackPanel.cs" t="Include" />
+            <e p="PlayerInfoPanel.cs" t="Include" />
+            <e p="PlayerItemUI.cs" t="Include" />
+            <e p="PlayerSlot.cs" t="Include" />
+            <e p="Slot.cs" t="Include" />
+            <e p="ToolTip.cs" t="Include" />
+          </e>
+          <e p="ScrollView-master" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ScrollViewEditor.cs" t="Include" />
+            </e>
+            <e p="GDropDown.cs" t="Include" />
+            <e p="ScrollView.cs" t="Include" />
           </e>
         </e>
         <e p="Editor" t="Include">

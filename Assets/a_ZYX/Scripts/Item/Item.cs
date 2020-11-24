@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SerializeField]
 public class Item
 {
    public int ID { get; set; }
@@ -32,6 +33,7 @@ public class Item
       Weapon,
       Materail
    }
+
    /// <summary>
    /// 品质
    /// </summary>
@@ -47,5 +49,32 @@ public class Item
       /// 传说
       /// </summary>
       Legendary
+   }
+
+   public virtual string GetToolTipText()
+   {
+      string color = "";
+      switch (quality)
+      {
+         case Quality.Common:
+            color = "white";
+            break;
+         case Quality.Uncomman:
+            color = "line";
+            break;
+         case Quality.Epic:
+            color = "magenta";
+            break;
+         case Quality.Legendary:
+            color = "orange";
+            break;
+      }
+      string text = string.Format("<color={0}><size=35>{1}</size></color>\n" +
+                                  "<color=blue><size=30>购买价格:{4}\n" +
+                                  "出售价格:{2}</size></color>\n" +
+                                  "<color=yellow><size=25>{3}</size></color>\n", color, Name, SellPrice, Description,BuyPrice);
+
+      return text;
+
    }
 }

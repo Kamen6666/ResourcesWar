@@ -9,6 +9,7 @@ public class Weapon : Item
     /// </summary>
     public enum ProfessionalType
     {
+        None,
         /// <summary>
         /// 基础
         /// </summary>
@@ -35,6 +36,7 @@ public class Weapon : Item
 
     public enum WeaponType
     {
+        None,
         MainHand,
         OffHand
     }
@@ -63,6 +65,13 @@ public class Weapon : Item
         this.weaponType = weaponType;
         this.professionalType = professionalType;
         this.AttackRange = attackRange;
+    }
 
+    public override string GetToolTipText()
+    {
+        string text= base.GetToolTipText();
+        string newText = text + string.Format("适配职业：{0}\n" +
+                                              "武器类型：{1}\n",professionalType,weaponType);
+        return newText;
     }
 }

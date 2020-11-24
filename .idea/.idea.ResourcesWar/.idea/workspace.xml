@@ -12,9 +12,21 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ResourcesWar/03Terrain/01Prefabs/Terrain/PostProcessing/Editor/Monitors/HistogramMonitor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/CopyHierarchy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/ChangePlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/DataMrg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/PlayerItemData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556F6DF1-3FB5-4CD9-A7C2-B976BBB72AEA/f9/f6208fa5/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/UnityProject/背包系统 装备系统 锻造系统/Assets/TTTT/ScrollView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/CopyHierarchy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556F6DF1-3FB5-4CD9-A7C2-B976BBB72AEA/85/5a1adc1c/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/2019.4.14f1c1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/KnapsackPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/ZYX_Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/ToolTip.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/75/7bb5cb98/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/ItemUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/a_ZYX/Scripts/PlayerSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/d0/eb0721e9/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -39,6 +51,29 @@
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/Item/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/InventoryManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scene/Car.shader" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Glinting.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/RimLighting.shader" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/ToolTip.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/Equipment.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Slot.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerItemUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/Consumable.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/ItemUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/SavePlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/PlayerSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/InventoryManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/KnapsackPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/PlayerItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/DataMrg.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/LoadPlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/ZYX_Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/PlayerInfoPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/ChangePlayer.cs" />
       </list>
     </option>
   </component>
@@ -77,6 +112,19 @@
       <workItem from="1605767607399" duration="3120000" />
       <workItem from="1605771196441" duration="14904000" />
       <workItem from="1605793191289" duration="154000" />
+      <workItem from="1605793449882" duration="3802000" />
+      <workItem from="1605857245316" duration="1481000" />
+      <workItem from="1605860391981" duration="5932000" />
+      <workItem from="1605871125806" duration="9687000" />
+      <workItem from="1605923041659" duration="16158000" />
+      <workItem from="1605949003659" duration="16348000" />
+      <workItem from="1606025909051" duration="664000" />
+      <workItem from="1606026895648" duration="59000" />
+      <workItem from="1606026987188" duration="35000" />
+      <workItem from="1606027513490" duration="5087000" />
+      <workItem from="1606093454000" duration="31858000" />
+      <workItem from="1606133659282" duration="9215000" />
+      <workItem from="1606143323137" duration="27780000" />
     </task>
     <servers />
   </component>
@@ -87,13 +135,53 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="478" y="1310" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605785967428">
-      <screen x="66" y="1080" width="1854" height="1080" />
+    <state x="475" y="230" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606114365967">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state x="475" y="230" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606114365967" />
     <state x="478" y="1310" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1605785967428" />
-    <state x="551" y="1436" width="672" height="678" key="search.everywhere.popup" timestamp="1605790934427">
+    <state x="673" y="282" key="RiderGenerateDialog" timestamp="1605941407533">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="673" y="282" key="RiderGenerateDialog/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1605941407533" />
+    <state x="565" y="316" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605876228311">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="565" y="316" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1605876228311" />
+    <state x="212" y="1174" width="1614" height="1067" key="dock-window-1" timestamp="1606216457464">
       <screen x="66" y="1080" width="1854" height="1080" />
     </state>
-    <state x="551" y="1436" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1605790934427" />
+    <state x="923" y="1111" width="1048" height="1055" key="dock-window-1/62.0.1858.1080/0.1080.1920.1080@0.1080.1920.1080" timestamp="1605920685942" />
+    <state x="167" y="1145" width="1614" height="1067" key="dock-window-1/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606209835439" />
+    <state x="212" y="1174" width="1614" height="1067" key="dock-window-1/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606216457464" />
+    <state x="672" y="1358" width="1012" height="1082" key="dock-window-2" timestamp="1606113181222">
+      <screen x="66" y="1080" width="1854" height="1080" />
+    </state>
+    <state x="666" y="23" width="1012" height="1082" key="dock-window-2/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606112841781" />
+    <state x="672" y="1358" width="1012" height="1082" key="dock-window-2/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606113181222" />
+    <state x="980" y="38" width="1149" height="1082" key="dock-window-3" timestamp="1606119440018">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1117" y="76" width="1149" height="1082" key="dock-window-3/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606115200024" />
+    <state x="980" y="38" width="1149" height="1082" key="dock-window-3/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606119440018" />
+    <state x="624" y="172" width="1149" height="1082" key="dock-window-4" timestamp="1606114558544">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="624" y="172" width="1149" height="1082" key="dock-window-4/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606114558544" />
+    <state x="104" y="1196" width="1149" height="887" key="dock-window-5" timestamp="1606140764789">
+      <screen x="66" y="1080" width="1854" height="1080" />
+    </state>
+    <state x="61" y="100" width="1149" height="887" key="dock-window-5/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606134583215" />
+    <state x="104" y="1196" width="1149" height="887" key="dock-window-5/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606140764789" />
+    <state x="61" y="100" width="1149" height="887" key="dock-window-5/62.0.1858.1080@62.0.1858.1080" timestamp="1606137816357" />
+    <state x="965" y="804" key="run.anything.popup" timestamp="1606141504904">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="965" y="804" key="run.anything.popup/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606141504904" />
+    <state x="548" y="356" width="674" height="678" key="search.everywhere.popup" timestamp="1606217809277">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="548" y="356" width="674" height="678" key="search.everywhere.popup/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606217809277" />
+    <state x="551" y="1436" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606209392450" />
   </component>
 </project>
