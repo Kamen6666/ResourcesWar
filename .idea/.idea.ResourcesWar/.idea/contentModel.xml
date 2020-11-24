@@ -11,14 +11,52 @@
       <e p="Assets" t="Include">
         <e p="a_LX" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Face.cs" t="Include" />
+            <e p="LoadAsset.cs" t="Include" />
+            <e p="Lx_Test.cs" t="Include" />
             <e p="SkillData.cs" t="Include" />
-            <e p="SkillManager.cs" t="Include" />
-            <e p="SkillsButton.cs" t="Include" />
+            <e p="UserLogic" t="Include">
+              <e p="PassiveSkillEffective.cs" t="Include" />
+              <e p="UserUIControllers" t="Include">
+                <e p="SkillTree_PanelController.cs" t="Include" />
+              </e>
+              <e p="UserUIModules" t="Include">
+                <e p="SkillTree_Panel.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="a_ZJ" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="MainCamearManager.cs" t="Include" />
+        </e>
+        <e p="a_ZYH" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Manager" t="Include">
+              <e p="GameControllerManager.cs" t="Include" />
+              <e p="MonoSingleton.cs" t="Include" />
+              <e p="PhotonManager.cs" t="Include" />
+            </e>
+            <e p="Receiver" t="Include">
+              <e p="AccountReceiver.cs" t="Include" />
+              <e p="IReceiver.cs" t="Include" />
+              <e p="PlayerReceiver.cs" t="Include" />
+            </e>
+            <e p="UIController" t="Include">
+              <e p="CreateController.cs" t="Include" />
+              <e p="InitController.cs" t="Include" />
+              <e p="LoginController.cs" t="Include" />
+              <e p="MainController.cs" t="Include" />
+              <e p="RegisterController.cs" t="Include" />
+            </e>
+            <e p="UIPanel" t="Include">
+              <e p="CreatePanel.cs" t="Include" />
+              <e p="InitPanel.cs" t="Include" />
+              <e p="LoginPanel.cs" t="Include" />
+              <e p="MainPanel.cs" t="Include" />
+              <e p="RegisterPanel.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="a_ZYX" t="Include">
           <e p="Scripts" t="Include">
@@ -30,10 +68,7 @@
               <e p="Consumable.cs" t="Include" />
               <e p="Equipment.cs" t="Include" />
               <e p="Item.cs" t="Include" />
-              <e p="Material.cs" t="Include" />
-              <e p="PlayerItemData.cs" t="Include" />
               <e p="Weapon.cs" t="Include" />
-              <e p="ZYX_Player.cs" t="Include" />
             </e>
             <e p="ItemUI.cs" t="Include" />
             <e p="KnapsackPanel.cs" t="Include" />
@@ -52,6 +87,7 @@
           </e>
         </e>
         <e p="Editor" t="Include">
+          <e p="AssetBundleSimpleBuild.cs" t="Include" />
           <e p="CopyHierarchy.cs" t="Include" />
           <e p="SImpleTool.cs" t="Include" />
         </e>
@@ -160,6 +196,18 @@
                 <e p="TextureBlenderStandardMetallic.cs" t="Include" />
                 <e p="TextureBlenderStandardMetallicRoughness.cs" t="Include" />
                 <e p="TextureBlenderStandardSpecular.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="LX" t="Include">
+            <e p="UI" t="Include">
+              <e p="Prefabs" t="Include">
+                <e p="SkillUIPanels" t="Include">
+                  <e p="PlayerItemData.cs" t="Include" />
+                  <e p="ZYX_Player.cs" t="Include" />
+                </e>
               </e>
             </e>
           </e>
@@ -402,7 +450,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="UIFrame" t="Include">
-            <e p="AutoCreate.cs" t="Include" />
             <e p="JsonParseClasses.cs" t="Include" />
             <e p="SystemDefine.cs" t="Include" />
             <e p="UIConfigurationManager.cs" t="Include" />
