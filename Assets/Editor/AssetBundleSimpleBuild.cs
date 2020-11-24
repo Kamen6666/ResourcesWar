@@ -7,15 +7,10 @@ using UnityEngine;
 public class AssetBundleSimpleBuild : Editor
 {
     
-    public static string NeedBuildPath = Application.dataPath + "/NeedBuild";
-    public static string outputPath = Application.dataPath + "/OutputAssetBundle";
+    public static string NeedBuildPath = Application.dataPath + "/Resources/LX/SkillData";
+    public static string outputPath = Application.dataPath + "/a_LX/OutPutAssetBundle";
    
-   public static void SimpleBuildWindows64()
-    {
-        BuildPipeline.BuildAssetBundles(outputPath,
-            BuildAssetBundleOptions.ChunkBasedCompression,
-            BuildTarget.StandaloneWindows64);
-    }
+  
     [MenuItem("SimpleTool/AssetBundleWindows64")]
     public static void AutoBuildWindow64()
     {
@@ -30,7 +25,23 @@ public class AssetBundleSimpleBuild : Editor
         //刷新资源
         AssetDatabase.Refresh();
     }
-   
+    /// <summary>
+    /// 清除Bundle名称
+    /// </summary>
+    private static void ClearAssetBundleNames()
+    {
+        //获取所有的Bundle名称
+        string[] names = AssetDatabase.GetAllAssetBundleNames();
+
+        //遍历
+        for (int i = 0; i < names.Length; i++)
+        {
+            //强制移除bundle名称
+            AssetDatabase.RemoveAssetBundleName(names[i], true);
+        }
+    }
+
+
     public static void SetFilesAssetBundleName(string path)
     {
         //先获取该路径下的所有文件路径
@@ -52,6 +63,8 @@ public class AssetBundleSimpleBuild : Editor
             SetAssetBundleName(filesName[i]);
         }
     }
+
+
     private static void SetAssetBundleName(string path)
     {
         #region 例子
@@ -74,19 +87,14 @@ public class AssetBundleSimpleBuild : Editor
         AssetImporter asset = AssetImporter.GetAtPath(relativePath);
         asset.assetBundleName = bundleName;
     }
-    /// <summary>
-    /// 清除Bundle名称
-    /// </summary>
-    private static void ClearAssetBundleNames()
-    {
-        //获取所有的Bundle名称
-        string[] names = AssetDatabase.GetAllAssetBundleNames();
 
-        //遍历
-        for (int i = 0; i < names.Length; i++)
-        {
-            //强制移除bundle名称
-            AssetDatabase.RemoveAssetBundleName(names[i], true);
-        }
+
+    public static void SimpleBuildWindows64()
+    {
+        BuildPipeline.BuildAssetBundles(outputPath,
+            BuildAssetBundleOptions.ChunkBasedCompression,
+            BuildTarget.StandaloneWindows64);
     }
+   
+    
 }
