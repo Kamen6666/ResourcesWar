@@ -9,16 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aad00df9f1a82d4887edb84827df1b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
   SkillID: 6
-  skillSprite: {fileID: 21300000, guid: 0b5ba48a12ad309408b91848f5b82bf9, type: 3}
-  skillName: Wizard_Trick
+  skillSprite: {fileID: -2372304105486388618, guid: 1d38ab81623f9a44ebc3e4aa7b679682,
+    type: 3}
+  skillName: "\u9707\u5730\u672F"
   skillLevel: 0
-  skillDes: 123123
+  skillDes: "\u51B2\u51FB\u5730\u9762\uFF0C\u53D1\u51FA\u51B2\u51FB\u6CE2"
   isUnlock: 0
   preSkills:
-  - {fileID: 11400000, guid: 7eaf5218be368454eb216629b080076e, type: 2}
-  - {fileID: 11400000, guid: 1a9a4c86ee5410e44a6ef6c8518e376f, type: 2}
-  - {fileID: 11400000, guid: eb12a88758e60e54fb455e5130b998ed, type: 2}
+  - {fileID: 11400000, guid: 53218a8f157461d41b4737ee7a84cc00, type: 2}
+  - {fileID: 11400000, guid: 8fdd1d12e6be3404b8d545c95e68e26f, type: 2}
+  - {fileID: 11400000, guid: a83b2e64ac469054eb96f70d616562e3, type: 2}
+  maxSkillPoint: 3
+  isPassive: 0
