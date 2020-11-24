@@ -137,8 +137,6 @@ namespace UIFrame
             if (localPos == null)
             {
                 LoadModule(moduleName);
-
-
             }
             else
             {
@@ -161,15 +159,15 @@ namespace UIFrame
         #endregion
 
         #region 单窗口管理
-        private void PushModule(string moduleName)
+        public void PushModule(string moduleName)
         {
-           // LoadModule(moduleName,Vector2.zero);
-            //if (_uiModules[moduleName].uIModuleType == UIModuleType.MultipleControl)
-            //{
-            //    Debug.LogError("请选多窗口模式");
-            //    UnLoadModule(moduleName);
-            //    return;
-            //}
+            LoadModule(moduleName, Vector2.zero);
+            if (_uiModules[moduleName].uIModuleType == UIModuleType.MultipleControl)
+            {
+                Debug.LogError("请选多窗口模式");
+                UnLoadModule(moduleName);
+                return;
+            }
 
             //如果栈不为空
             if (_uiModuleStack.Count != 0)

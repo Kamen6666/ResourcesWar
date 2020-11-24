@@ -13,4 +13,6 @@ public class SkillData : ScriptableObject
     public bool isUnlock;
     public SkillData[] preSkills;
 
+    public int maxSkillPoint;
+    public bool isPassive;
 }

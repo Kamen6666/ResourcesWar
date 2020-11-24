@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  SkillID: 5
+  skillSprite: {fileID: 35040028700281053, guid: 1d38ab81623f9a44ebc3e4aa7b679682,
+    type: 3}
+  skillName: "\u6E05\u6670\u672F"
+  skillLevel: 0
+  skillDes: "\u589E\u5F3A\u84DD\u91CF\u56DE\u590D"
+  isUnlock: 0
+  preSkills:
+  - {fileID: 11400000, guid: 53218a8f157461d41b4737ee7a84cc00, type: 2}
+  - {fileID: 11400000, guid: 8fdd1d12e6be3404b8d545c95e68e26f, type: 2}
+  - {fileID: 11400000, guid: a83b2e64ac469054eb96f70d616562e3, type: 2}
+  maxSkillPoint: 3
+  isPassive: 1

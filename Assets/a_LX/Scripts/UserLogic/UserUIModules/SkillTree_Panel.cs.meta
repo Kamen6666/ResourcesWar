@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/a_LX/Scripts/UserLogic/UserUIModules/SkillTree_Panel.cs.meta
+guid: 958409d8e18c0a241b33248f3d21727a
+=======
+guid: a6fc5fa164d3db64aa449dd96a3cb8d3
+>>>>>>> 6bccbe5a29d7f94374a8c02108a2c758bea8a811:Assets/a_LX/Scripts/SkillsButton.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

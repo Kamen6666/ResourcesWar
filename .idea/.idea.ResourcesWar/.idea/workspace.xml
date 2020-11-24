@@ -51,6 +51,7 @@
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/Item/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/_ZYX/Scripts/InventoryManager.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/a_ZYX/Scene/Car.shader" />
         <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Glinting.cs" />
         <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/RimLighting.shader" />
@@ -74,6 +75,9 @@
         <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/Item/ZYX_Player.cs" />
         <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/PlayerInfoPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/ChangePlayer.cs" />
+=======
+        <option value="$PROJECT_DIR$/Assets/a_ZYX/Scripts/InventoryManager.cs" />
+>>>>>>> c45c81f3ce2df5b58997678f5947954952a3183e
       </list>
     </option>
   </component>
@@ -113,6 +117,7 @@
       <workItem from="1605771196441" duration="14904000" />
       <workItem from="1605793191289" duration="154000" />
       <workItem from="1605793449882" duration="3802000" />
+<<<<<<< HEAD
       <workItem from="1605857245316" duration="1481000" />
       <workItem from="1605860391981" duration="5932000" />
       <workItem from="1605871125806" duration="9687000" />
@@ -125,6 +130,8 @@
       <workItem from="1606093454000" duration="31858000" />
       <workItem from="1606133659282" duration="9215000" />
       <workItem from="1606143323137" duration="27780000" />
+=======
+>>>>>>> c45c81f3ce2df5b58997678f5947954952a3183e
     </task>
     <servers />
   </component>
@@ -140,6 +147,7 @@
     </state>
     <state x="475" y="230" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606114365967" />
     <state x="478" y="1310" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1605785967428" />
+<<<<<<< HEAD
     <state x="673" y="282" key="RiderGenerateDialog" timestamp="1605941407533">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -155,6 +163,13 @@
     <state x="167" y="1145" width="1614" height="1067" key="dock-window-1/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606209835439" />
     <state x="212" y="1174" width="1614" height="1067" key="dock-window-1/62.0.1858.1080/66.1080.1854.1080@66.1080.1854.1080" timestamp="1606216457464" />
     <state x="672" y="1358" width="1012" height="1082" key="dock-window-2" timestamp="1606113181222">
+=======
+    <state x="284" y="157" width="1115" height="914" key="dock-window-1" timestamp="1605842730924">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="284" y="157" width="1115" height="914" key="dock-window-1/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1605842730924" />
+    <state x="551" y="1436" width="672" height="678" key="search.everywhere.popup" timestamp="1605790934427">
+>>>>>>> c45c81f3ce2df5b58997678f5947954952a3183e
       <screen x="66" y="1080" width="1854" height="1080" />
     </state>
     <state x="666" y="23" width="1012" height="1082" key="dock-window-2/62.0.1858.1080/66.1080.1854.1080@62.0.1858.1080" timestamp="1606112841781" />
