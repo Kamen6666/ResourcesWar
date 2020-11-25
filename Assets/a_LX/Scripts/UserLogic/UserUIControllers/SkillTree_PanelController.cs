@@ -6,7 +6,7 @@ using Utilty;
 
 public class SkillTree_PanelController : UIControllerBase
 {
-    int skillPoint = 6;
+    int skillPoint = 20;
     SkillData currentClickData;
     SkillData[] Datas;
     Image skillImage;
@@ -27,66 +27,76 @@ public class SkillTree_PanelController : UIControllerBase
         pointText = _module.FindCurrentModuleWidget("Skill Point Text#").Text;
         _module.FindCurrentModuleWidget("Upgrade Button#").Button.onClick.AddListener(UpgradeButton);
 
+        btns = _module.GetSecondWidgets();
+        if (Datas == null)
+        {
+            Datas = new SkillData[btns.Length];
+        }
+        for (int i = 0; i < btns.Length; i++)
+        {
+            Datas[i] = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/{i}");
+            btns[i].Image.sprite = Datas[i].skillSprite;
+        }
+
         #region °ó¶¨°´Å¥
         _module.FindCurrentModuleSecondWidget("00_Fire Ball~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/0");
+            currentClickData = Datas[0];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("01_transformer~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/1");
+            currentClickData = Datas[1];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("02_Inferno~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/2");
+            currentClickData = Datas[2];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("03_Blaze~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/3");
+            currentClickData = Datas[3];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("04_Wolf~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/4");
+            currentClickData = Datas[4];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("05_Recovery~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/5");
+            currentClickData = Datas[5];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("06_Lifesteal~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/6");
+            currentClickData = Datas[6];
             DisplaySkillInfo();
 
         });
         _module.FindCurrentModuleSecondWidget("07_Metro~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/7");
+            currentClickData = Datas[7];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("08_Fire Dragon~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/8");
+            currentClickData = Datas[8];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("09_Duration~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/9");
+            currentClickData = Datas[9];
             DisplaySkillInfo();
         });
         _module.FindCurrentModuleSecondWidget("10_Magic Power~").Button.onClick.AddListener(() =>
         {
-            currentClickData = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/10");
+            currentClickData = Datas[10];
             DisplaySkillInfo();
         });
         #endregion
-        btns = _module.GetSecondWidgets();
-        
+       
        
     }
     public void UpgradeButton()

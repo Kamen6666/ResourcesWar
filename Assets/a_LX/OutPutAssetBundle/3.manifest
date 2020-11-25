@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1304010194
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 442c3f4c84f8109cacf3e244beb0d70a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 47641f95451a321a23a4d5cd5fd03f40
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0edebe988447d234bb7c9eec0f5cde67, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/LX/SkillData/3.asset
+Dependencies:
+- E:/Unity/Working/Resources_Git/Assets/a_LX/OutPutAssetBundle/0

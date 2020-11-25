@@ -1,0 +1,52 @@
+ManifestFileVersion: 0
+CRC: 3530889297
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: 0
+      Dependencies: {}
+    Info_1:
+      Name: 1
+      Dependencies: {}
+    Info_2:
+      Name: 10
+      Dependencies:
+        Dependency_0: 7
+        Dependency_1: 8
+        Dependency_2: 9
+    Info_3:
+      Name: 2
+      Dependencies:
+        Dependency_0: 0
+    Info_4:
+      Name: 3
+      Dependencies:
+        Dependency_0: 0
+    Info_5:
+      Name: 4
+      Dependencies:
+        Dependency_0: 1
+    Info_6:
+      Name: 5
+      Dependencies:
+        Dependency_0: 2
+        Dependency_1: 3
+        Dependency_2: 4
+    Info_7:
+      Name: 6
+      Dependencies:
+        Dependency_0: 2
+        Dependency_1: 3
+        Dependency_2: 4
+    Info_8:
+      Name: 7
+      Dependencies:
+        Dependency_0: 5
+    Info_9:
+      Name: 8
+      Dependencies:
+        Dependency_0: 5
+    Info_10:
+      Name: 9
+      Dependencies:
+        Dependency_0: 6
