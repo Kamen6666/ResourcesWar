@@ -1,115 +1,250 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using UnityEngine;
 using LitJson;
+using UnityEngine.UI;
+
 public class InventoryManager : MonoBehaviour
 {
     #region 单例
 
-    public static InventoryManager Instance;
+    private static InventoryManager _instance;
 
-    private void Awake()
+    public static InventoryManager Instance
     {
-        Instance = this;
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.Find("GameManager").GetComponent<InventoryManager>();
+            }
+
+            return _instance;
+        }
     }
 
     #endregion
+
     /// <summary>
     /// 物品列表
     /// </summary>
     public List<Item> itemList;
-    
-    
+
+    public ItemUI PickedItem
+    {
+        get { return pickedItemUI; }
+    }
+
+ 
+    private PlayerItemUI playerItemUi;
+    private ItemUI pickedItemUI;
+    public Canvas canvas;
+    public bool isToolTipShow = false;
+    public bool IsPickedItem = false;
+    public ToolTip toolTip;
+    private Vector2 toolTipOffset = new Vector2(0, 0);
     private void Start()
     {
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        pickedItemUI = GameObject.FindWithTag("Player").GetComponent<ItemUI>();
+        toolTip = transform.Find("/Canvas/ToolTip").GetComponent<ToolTip>();
+        // pickedItemUI = canvas.transform.Find("PickedItem").GetComponent<ItemUI>();
+        if (pickedItemUI == null)
+            Debug.LogWarning("pickedItemUI==null");
         ParseItemJson();
-        Show(10);
+        //SavePlayerDataJson();
     }
 
+    public void PicedUpItem(Item item, int amount)
+    {
+        PickedItem.SetItem(item, amount);
+        PickedItem.Show();
+        IsPickedItem = true;
+        toolTip.Hide();
+    }
+
+    private void Update()
+    {
+        // Debug.Log(IsPickedItem);
+        if (IsPickedItem)
+        {
+            Vector2 position;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform,
+                Input.mousePosition, null, out position);
+            pickedItemUI.SetLocalPos(position);
+        }
+
+        if (isToolTipShow && IsPickedItem == false)
+        {
+            Vector2 position;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform,
+                Input.mousePosition, null, out position);
+            toolTip.SetLocalPosition(position + toolTipOffset);
+            // Debug.Log(isToolTipShow+"|"+position+"|"+Input.mousePosition);
+
+        }
+    }
+
+    public Item GetItemById(int id)
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (itemList[i].ID == id)
+            {
+//                Debug.Log(itemList[i].Name);
+                return itemList[i];
+            }
+           
+        }
+        return null;
+    }
     #region 解析json数据
 
-       private void ParseItemJson()
+    private void ParseItemJson()
     {
-       itemList=new List<Item>();
+        itemList = new List<Item>();
+        string path = Application.streamingAssetsPath + "/ItemJson.json";
+        StreamReader tmpReader = File.OpenText(path);
+        string result = tmpReader.ReadToEnd();
+        JsonData itemdata = JsonMapper.ToObject(result);
 
-       string path = Application.streamingAssetsPath + "/ItemJson.json";
-       StreamReader tmpReader = File.OpenText(path);
-       string result = tmpReader.ReadToEnd();
-       JsonData itemdata=JsonMapper.ToObject(result);
-
-       for (int i = 0; i < itemdata.Count; i++)
-       {
+        for (int i = 0; i < itemdata.Count; i++)
+        {
 //           Debug.Log("i======"+i);
-           int id = (int) itemdata[i]["id"];
-           string name = itemdata[i]["name"].ToString();
-           string typeStr = itemdata[i]["type"].ToString();
-           Item.ItemType itemType = (Item.ItemType) System.Enum.Parse(typeof(Item.ItemType), typeStr);
-           string qualityStr = itemdata[i]["quality"].ToString();
-           Item.Quality quality = (Item.Quality) System.Enum.Parse(typeof(Item.Quality), qualityStr);
-           string description = itemdata[i]["description"].ToString();
-           int buyPrice = (int)itemdata[i]["buyPrice"];
-           int sellPrice = (int) itemdata[i]["sellPrice"];
-           string sprite = itemdata[i]["sprite"].ToString();
+            int id = (int) itemdata[i]["id"];
+            string name = itemdata[i]["name"].ToString();
+            string typeStr = itemdata[i]["type"].ToString();
+            Item.ItemType itemType = (Item.ItemType) System.Enum.Parse(typeof(Item.ItemType), typeStr);
+            string qualityStr = itemdata[i]["quality"].ToString();
+            Item.Quality quality = (Item.Quality) System.Enum.Parse(typeof(Item.Quality), qualityStr);
+            string description = itemdata[i]["description"].ToString();
+            int buyPrice = (int) itemdata[i]["buyPrice"];
+            int sellPrice = (int) itemdata[i]["sellPrice"];
+            string sprite = itemdata[i]["sprite"].ToString();
 
-           Item item = null;
-           switch (itemType)
-           {
-               //消耗品
-               case Item.ItemType.Consumable:
-                   int hp = (int) itemdata[i]["hp"];
-                   int mp = (int) itemdata[i]["mp"];
-                   item=new Consumable(id,name,itemType,quality,description,buyPrice,sellPrice,sprite,hp,mp);
-                   break;
-               //装备
-               case Item.ItemType.Equipment:
-                   int physical_Defence = (int) itemdata[i]["physical_Defence"];
-                   int magical_Defence=(int)itemdata[i]["magical_Defence"];
-                   item=new Equipment(id,name,itemType,quality,description,buyPrice,sellPrice,sprite,physical_Defence,magical_Defence);
-                   break;
-               //武器
-               case Item.ItemType.Weapon:
-                   int physical_Damage = (int) itemdata[i]["physical_Damage"];
-                   int magical_Damage = (int) itemdata[i]["magical_Damage"];
-                   string weaponTypeStr = itemdata[i]["weaponType"].ToString();
-                   Weapon.WeaponType weaponType = (Weapon.WeaponType) System.Enum.Parse(typeof(Weapon.WeaponType),weaponTypeStr);
-                   string professionalTypeStr = itemdata[i]["professionalType"].ToString();
-                   Weapon.ProfessionalType professionalType =
-                       (Weapon.ProfessionalType) System.Enum.Parse(typeof(Weapon.ProfessionalType),
-                           professionalTypeStr);
-                   if (professionalType==Weapon.ProfessionalType.Hunter)
-                   {
-                       int attackRange =(int) itemdata[i]["attackRange"];
-                       item=new Weapon(id,name,itemType,quality,description,buyPrice,sellPrice,sprite,physical_Damage,magical_Damage,weaponType,
-                           professionalType,attackRange);
-                   }
-                   else
-                   {
-                       item=new Weapon(id,name,itemType,quality,description,buyPrice,sellPrice,sprite,physical_Damage,magical_Damage,weaponType,
-                           professionalType);
-                   }
-                   break;
-               case Item.ItemType.Materail:
-                   break;
-           }
-           itemList.Add(item);
+            Item item = null;
+            switch (itemType)
+            {
+                //消耗品
+                case Item.ItemType.Consumable:
+                    int hp = (int) itemdata[i]["hp"];
+                    int mp = (int) itemdata[i]["mp"];
+                    string consumableTypeStr = itemdata[i]["consumableType"].ToString();
+                    Consumable.ConsumableType consumableType =
+                        (Consumable.ConsumableType) System.Enum.Parse(typeof(Consumable.ConsumableType),
+                            consumableTypeStr);
+                    item = new Consumable(id, name, itemType, quality, description, buyPrice, sellPrice, sprite, hp,
+                        mp, consumableType);
+                    break;
+                //装备
+                case Item.ItemType.Equipment:
+                    int physical_Defence = (int) itemdata[i]["physical_Defence"];
+                    int magical_Defence = (int) itemdata[i]["magical_Defence"];
+                    string equipmentStr = itemdata[i]["equimentType"].ToString();
+                    Equipment.EquimentType equimentType =
+                        (Equipment.EquimentType) System.Enum.Parse(typeof(Equipment.EquimentType), equipmentStr);
+                    //Debug.Log(equipmentStr);
 
-       }
+                    item = new Equipment(id, name, itemType, quality, description, buyPrice, sellPrice, sprite,
+                        physical_Defence, magical_Defence, equimentType);
+                    break;
+                //武器
+                case Item.ItemType.Weapon:
+                    int physical_Damage = (int) itemdata[i]["physical_Damage"];
+                    int magical_Damage = (int) itemdata[i]["magical_Damage"];
+                    string weaponTypeStr = itemdata[i]["weaponType"].ToString();
+                    Weapon.WeaponType weaponType =
+                        (Weapon.WeaponType) System.Enum.Parse(typeof(Weapon.WeaponType), weaponTypeStr);
+                    string professionalTypeStr = itemdata[i]["professionalType"].ToString();
+                    Weapon.ProfessionalType professionalType =
+                        (Weapon.ProfessionalType) System.Enum.Parse(typeof(Weapon.ProfessionalType),
+                            professionalTypeStr);
+                    if (professionalType == Weapon.ProfessionalType.Hunter)
+                    {
+                        int attackRange = (int) itemdata[i]["attackRange"];
+                        item = new Weapon(id, name, itemType, quality, description, buyPrice, sellPrice, sprite,
+                            physical_Damage, magical_Damage, weaponType,
+                            professionalType, attackRange);
+                    }
+                    else
+                    {
+                        item = new Weapon(id, name, itemType, quality, description, buyPrice, sellPrice, sprite,
+                            physical_Damage, magical_Damage, weaponType,
+                            professionalType);
+                    }
+
+                    break;
+                case Item.ItemType.Materail:
+                    break;
+            }
+
+            itemList.Add(item);
+
+        }
     }
 
+ 
+
     #endregion
+
+
+    public void HideTooolTip()
+    {
+        isToolTipShow = false;
+        toolTip.Hide();
+    }
+
+    public void ShowToolTip(string content)
+    {
+        isToolTipShow = true;
+        toolTip.Show(content);
+    }
+
+    /// <summary>
+    /// 捡起物品槽中指定数量的物体
+    /// </summary>
+    /// <param name="itemUi"></param>
+    public void PickupItem(Item item, int amount)
+    {
+        PickedItem.SetItem(item, amount);
+        IsPickedItem = true;
+        pickedItemUI.Show();
+
+       
+        this.toolTip.Hide();
+    }
 
     private void Show(int id)
     {
         for (int i = 0; i < itemList.Count; i++)
         {
-            if (i==id)
+            if (i == id)
             {
-                Debug.Log(itemList[i].ID+"|"+itemList[i].Name+"|"+itemList[i].itemType+"|"+itemList[i].quality
-                +"|"+itemList[i].Description+"|"+itemList[i].BuyPrice+"|"+itemList[i].SellPrice+"|"+itemList[i].Sprite);
+                Debug.Log(itemList[i].ID + "|" + itemList[i].Name + "|" + itemList[i].itemType + "|" +
+                          itemList[i].quality
+                          + "|" + itemList[i].Description + "|" + itemList[i].BuyPrice + "|" + itemList[i].SellPrice +
+                          "|" + itemList[i].Sprite);
             }
-           
+
         }
+    }
+
+    public void RemoveOneItem()
+    {
+        pickedItemUI.ReduceAmount();
+        if (PickedItem.Amount <= 0)
+        {
+            IsPickedItem = false;
+            pickedItemUI.Hide();
+        }
+    }
+
+    public void RemoveAlllItem()
+    {
+        IsPickedItem = false;
+        pickedItemUI.Hide();
     }
     
 }

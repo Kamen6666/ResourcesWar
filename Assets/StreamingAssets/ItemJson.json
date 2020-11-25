@@ -10,7 +10,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Consumable/Potion",
         "hp":25,
-        "mp":0
+        "mp":0,
+		"consumableType":"HuiFu"
     },
     {
         "id":2,
@@ -22,7 +23,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Consumable/Hi-Potion",
         "hp":50,
-        "mp":0
+        "mp":0,
+		"consumableType":"HuiFu"
     },
     {
         "id":3,
@@ -34,7 +36,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Consumable/Ether",
         "hp":0,
-        "mp":75
+        "mp":75,
+		"consumableType":"HuiFu"
     },
     {
         "id":4,
@@ -44,9 +47,10 @@
         "description":"回复75魔力值，75生命值",
         "buyPrice":10,
         "sellPrice":5,
-        "sprite":"Sprites/Items/Consumable/Maiden Kiss",
+        "sprite":"Sprites/Items/Consumable/Maiden_Kiss",
         "hp":75,
-        "mp":75
+        "mp":75,
+		"consumableType":"HuiFu"
     },
     {
         "//":"--------------------装备类------------------",
@@ -59,7 +63,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Equipment/Hempen_Robe",
         "physical_Defence":15,
-        "magical_Defence":22
+        "magical_Defence":22,
+		"equimentType":"Chest"
     },
     {
         "id":6,
@@ -71,7 +76,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Equipment/Silken_Robe",
         "physical_Defence":15,
-        "magical_Defence":28
+        "magical_Defence":28,
+		"equimentType":"Chest"
     },
     {
         "id":7,
@@ -83,7 +89,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Equipment/Magus_Robe",
         "physical_Defence":15,
-        "magical_Defence":30
+        "magical_Defence":30,
+		"equimentType":"Chest"
     },
     {
         "id":8,
@@ -95,7 +102,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Equipment/Mistle_Robe",
         "physical_Defence":19,
-        "magical_Defence":30
+        "magical_Defence":30,
+		"equimentType":"Chest"
     },
     {
         "id":9,
@@ -107,7 +115,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Equipment/Blaze_Robe",
         "physical_Defence":25,
-        "magical_Defence":30
+        "magical_Defence":30,
+		"equimentType":"Chest"
     },
     {
         "id":10,
@@ -119,7 +128,8 @@
         "sellPrice":5,
         "sprite":"Sprites/Items/Equipment/Flurry_Robe",
         "physical_Defence":25,
-        "magical_Defence":35
+        "magical_Defence":35,
+		"equimentType":"Chest"
     },
     {
         "//":"---------------魔法师------------------",
@@ -173,7 +183,7 @@
         "description":"增加19物理攻击，0魔法攻击",
         "buyPrice":10,
         "sellPrice":5,
-        "sprite":"Sprites/Items/Weapon/Hunter/Spring Staff",
+        "sprite":"Sprites/Items/Weapon/Hunter/LongBow",
         "physical_Damage":19,
         "magical_Damage":0,
         "weaponType":"MainHand",
