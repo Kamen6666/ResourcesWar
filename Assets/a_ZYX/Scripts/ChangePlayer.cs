@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = System.Diagnostics.Debug;
 
 [System.Serializable]
 public class PlayerRAMItemData
@@ -30,17 +31,27 @@ public class SavePlayerItem
 {
     public List<PlayerItemRAM> list = new List<PlayerItemRAM>();
 }
+
+
 public class ChangePlayer : MonoBehaviour
 {
     public PlayerItemRAM playerItemRam;
-
+    
+    private Button changebtn;
     private Text playerName;
 
-    private void Start()
+     void Start()
     {
         playerName = transform.GetChild(0).GetComponent<Text>();
         playerName.text = playerItemRam.playerRamItemData.name;
-
+        changebtn = GetComponent<Button>();
+        changebtn.onClick.AddListener(()=>
+        {
+            print("btn click");
+            PlayerInfoPanel.Instance.SetChanegPlayer(this);
+            PlayerInfoPanel.Instance.LoadPlayerDataById(playerItemRam.playerid);
+          
+        });
     }
     // Start is called before the first frame update
 }

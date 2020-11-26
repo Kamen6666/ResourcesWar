@@ -31,6 +31,7 @@ public class PlayerSlot : Slot
         
         if (InventoryManager.Instance.IsPickedItem)
         {
+            
             ItemUI pickedItem = InventoryManager.Instance.PickedItem;
             if (transform.childCount>0)
             {
@@ -44,11 +45,13 @@ public class PlayerSlot : Slot
             {
                 if (IsRightItem(pickedItem.Item))
                 {
-                    
                     this.StoreSlotItem(InventoryManager.Instance.PickedItem.Item);
+                    PlayerInfoPanel.Instance.RefeshPlayerItem(PlayerInfoPanel.Instance.changePlayer.playerItemRam.playerid);
+                
                     InventoryManager.Instance.RemoveOneItem();
                 }
             }
+           
         }
         else
         {

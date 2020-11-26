@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UIFrame;
 using UnityEngine;
 using UnityEngine.UI;
 using Debug = System.Diagnostics.Debug;
@@ -13,7 +14,7 @@ public class PlayerInfoPanel : Inventory
    }
    public GameObject playerList;
    private ChangePlayer[] changePlayers;
-   
+   public ChangePlayer changePlayer;
    
    public Text name;
    public Text sq;
@@ -31,7 +32,7 @@ public class PlayerInfoPanel : Inventory
    public override void Start()
    {
       base.Start();
-      
+    
       LoadPlayerDataById(0);
       
       mainHandSlot = transform.Find("Item/MainHand").GetComponent<PlayerSlot>();
@@ -39,16 +40,15 @@ public class PlayerInfoPanel : Inventory
       equiment = transform.Find("Item/Equiment").GetComponent<PlayerSlot>();
 
    }
-   
+
+   public void SetChanegPlayer(ChangePlayer changePlayer)
+   {
+      this.changePlayer = changePlayer;
+   }
    /// <summary>
    /// 更新玩家数据界面
    /// </summary>
-   public void UpdatePlayerInfoPanel(int id)
-   {
-      
-   }
-
-   public void AddPlayerInfo(int id,ChangePlayer changePlayer)
+   public void UpdatePlayerInfoPanel(ChangePlayer changePlayer)
    {
       
    }
@@ -67,7 +67,8 @@ public class PlayerInfoPanel : Inventory
       }
       DataMrg.Instance.Save(savePlayerItem);
    }
-
+   
+   
    public void RefeshPlayerItem(int id)
    {
       changePlayers = playerList.GetComponentsInChildren<ChangePlayer>();
@@ -80,8 +81,8 @@ public class PlayerInfoPanel : Inventory
             {
                if (playerSlots[j].transform.childCount>0)
                {
-                  print(playerSlots[j].name);
-                  print( changePlayers[i].playerItemRam.playerRamItemData.itemid[j]);
+  //                print(playerSlots[j].name);
+//                  print( changePlayers[i].playerItemRam.playerRamItemData.itemid[j]);
                   changePlayers[i].playerItemRam.playerRamItemData.itemid[j] =
                      playerSlots[j].transform.GetChild(0).GetComponent<ItemUI>().Item.ID;
                }
@@ -90,6 +91,8 @@ public class PlayerInfoPanel : Inventory
       }
     
    }
+
+   public bool isClick = false;
    public void LoadPlayerDataById(int id)
    {
       playerItem = DataMrg.Instance.ParsePlayerItemJson();
@@ -99,12 +102,21 @@ public class PlayerInfoPanel : Inventory
       exp.text = (playerItem.list[id].playerRamItemData.exp).ToString();
       for (int j = 0; j < 8; j++)
       {
+         if (playerSlots[j].transform.childCount>0)
+         {
+            Destroy(playerSlots[j].transform.GetChild(0).gameObject);
+         }
          Item item=InventoryManager.Instance.GetItemById(playerItem.list[id].playerRamItemData.itemid[j]);
          if (item!=null)
          {
             playerSlots[j].StoreSlotItem(item);
          }
       }
+   }
+
+   public void OnSkillClick()
+   {
+      UIManager.GetInstance().PushModule("SkillTree_Panel");
    }
 }
 

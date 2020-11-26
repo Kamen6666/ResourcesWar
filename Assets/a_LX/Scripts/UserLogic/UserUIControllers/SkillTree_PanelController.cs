@@ -26,7 +26,7 @@ public class SkillTree_PanelController : UIControllerBase
         skillDesText = _module.FindCurrentModuleWidget("Des Text#").Text;
         pointText = _module.FindCurrentModuleWidget("Skill Point Text#").Text;
         _module.FindCurrentModuleWidget("Upgrade Button#").Button.onClick.AddListener(UpgradeButton);
-
+       // _module.FindCurrentModuleWidget("CloseButton#").Button.onClick.AddListener();
         #region 绑定按钮
         _module.FindCurrentModuleSecondWidget("00_Fire Ball~").Button.onClick.AddListener(() =>
         {
@@ -146,6 +146,7 @@ public class SkillTree_PanelController : UIControllerBase
         return false;
     }
 
+
     public void DisplaySkillInfo()
     {
         //显示技能信息
@@ -201,4 +202,5 @@ public class SkillTree_PanelController : UIControllerBase
         }
         UpdatePointUI();
     }
+    
 }

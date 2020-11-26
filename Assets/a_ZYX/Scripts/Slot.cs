@@ -18,7 +18,6 @@ public class Slot : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPoin
             itemObj = itemGameObject;
             itemGameObject.transform.SetParent(transform);
             itemGameObject.transform.localPosition=Vector3.zero;
-            //itemGameObject.transform.localScale = Vector3.one;
             itemGameObject.GetComponent<ItemUI>().SetItem(item);
         }
         else
@@ -33,7 +32,6 @@ public class Slot : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPoin
         GameObject itemGameObject = Instantiate(itemPrefab);
         itemGameObject.transform.SetParent(transform);
         itemGameObject.transform.localPosition = Vector3.zero;
-        //Debug.Log(itemUI.transform.GetChild(0).GetComponent<ItemUI>().Item+"|"+itemUI.transform.GetChild(0).GetComponent<ItemUI>().Amount);
         itemGameObject.GetComponent<ItemUI>().SetItem(itemUI.transform.GetChild(0).GetComponent<ItemUI>().Item,itemUI.transform.GetChild(0).GetComponent<ItemUI>().Amount);
     }
 
