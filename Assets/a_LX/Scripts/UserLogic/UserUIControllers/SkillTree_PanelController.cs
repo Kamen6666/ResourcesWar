@@ -1,9 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
 using UIFrame;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 using Utilty;
-
+using XLua;
+[Hotfix]
 public class SkillTree_PanelController : UIControllerBase
 {
     int skillPoint = 20;
@@ -26,15 +29,19 @@ public class SkillTree_PanelController : UIControllerBase
         skillDesText = _module.FindCurrentModuleWidget("Des Text#").Text;
         pointText = _module.FindCurrentModuleWidget("Skill Point Text#").Text;
         _module.FindCurrentModuleWidget("Upgrade Button#").Button.onClick.AddListener(UpgradeButton);
-
+        //获取技能按钮
         btns = _module.GetSecondWidgets();
         if (Datas == null)
         {
             Datas = new SkillData[btns.Length];
         }
+       
         for (int i = 0; i < btns.Length; i++)
         {
+            
             Datas[i] = AssetsManager.GetInstance().GetAssets<SkillData>($"LX/SkillData/{i}");
+            //从json读取对应技能等级
+            Datas[i].skillLevel = UIConfigurationManager.GetInstance().GetSkillLevelByID(i);
             btns[i].Image.sprite = Datas[i].skillSprite;
         }
 
@@ -195,7 +202,6 @@ public class SkillTree_PanelController : UIControllerBase
         }
         UpdatePointUI();
     }
-
     public void Clear()
     {
         btns = _module.GetSecondWidgets();
@@ -210,5 +216,15 @@ public class SkillTree_PanelController : UIControllerBase
             Datas[i].skillLevel = 0;
         }
         UpdatePointUI();
+    }
+    
+    public Dictionary<int,int> SaveSkillData()
+    {
+        Dictionary<int, int> skillDatas = new Dictionary<int, int>();
+        for (int i = 0; i < btns.Length; i++)
+        {
+            skillDatas.Add(i,Datas[i].skillLevel);
+        }
+        return skillDatas;
     }
 }

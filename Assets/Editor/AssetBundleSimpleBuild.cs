@@ -96,5 +96,4 @@ public class AssetBundleSimpleBuild : Editor
             BuildTarget.StandaloneWindows64);
     }
    
-    
 }

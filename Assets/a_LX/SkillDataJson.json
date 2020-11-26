@@ -1,0 +1,49 @@
+{
+  "SkillData": [
+    {
+      "SkillID": 0,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 1,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 2,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 3,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 4,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 5,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 6,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 7,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 8,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 9,
+      "SkillLevel": 0
+    },
+    {
+      "SkillID": 10,
+      "SkillLevel": 0
+    }
+
+  ]
+}

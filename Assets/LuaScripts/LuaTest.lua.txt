@@ -1,0 +1,15 @@
+print("HotFix Coming!!!")
+
+--xlua.private_accessible(CS.LuaText)
+--xlua.hotfix(CS.LuaText,'ChangeID',function(self)
+	 --self.id=100;
+	 --print('XLua coming!!!!')
+	 
+--end)
+
+xlua.private_accessible(CS.SkillTree_PanelController)
+xlua.hotfix(CS.SkillTree_PanelController,'UpdatePointUI',function(self)
+    self.pointText.text='Point:'+self.skillPoint+'/40'
+end)
+
+print("Lua over!!!")

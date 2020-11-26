@@ -32,6 +32,7 @@ public class LoadAsset : MonoBehaviour
         //StartCoroutine(LoadAssetsByWWW());
         StartCoroutine(LoadAssetsByWebRequest());
     }
+    
     private IEnumerator LoadAssetsByWWW()
     {
         string path = "";
