@@ -24,6 +24,7 @@
                 <e p="SkillTree_Panel.cs" t="Include" />
               </e>
             </e>
+            <e p="XLuaManager.cs" t="Include" />
           </e>
         </e>
         <e p="a_ZJ" t="Include">
@@ -91,6 +92,10 @@
           <e p="AssetBundleSimpleBuild.cs" t="Include" />
           <e p="CopyHierarchy.cs" t="Include" />
           <e p="SImpleTool.cs" t="Include" />
+        </e>
+        <e p="LuaScripts" t="Include">
+          <e p="LuaTest.lua.txt" t="Include" />
+          <e p="LuaText.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="MeshBaker" t="Include">
@@ -534,6 +539,64 @@
               </e>
             </e>
             <e p="ExampleGenConfig.cs" t="Include" />
+          </e>
+          <e p="Gen" t="Include">
+            <e p="DelegatesGensBridge.cs" t="Include" />
+            <e p="EnumWrap.cs" t="Include" />
+            <e p="link.xml" t="Include" />
+            <e p="PackUnpack.cs" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="hotfix_id_map.lua.txt" t="Include" />
+            </e>
+            <e p="System_Collections_Generic_List_1_System_Int32_Wrap.cs" t="Include" />
+            <e p="System_Collections_IEnumeratorBridge.cs" t="Include" />
+            <e p="System_ObjectWrap.cs" t="Include" />
+            <e p="Tutorial_BaseClassWrap.cs" t="Include" />
+            <e p="Tutorial_CSCallLua_ItfDBridge.cs" t="Include" />
+            <e p="Tutorial_DerivedClassExtensionsWrap.cs" t="Include" />
+            <e p="Tutorial_DerivedClassWrap.cs" t="Include" />
+            <e p="Tutorial_ICalcWrap.cs" t="Include" />
+            <e p="UnityEngine_AnimationClipWrap.cs" t="Include" />
+            <e p="UnityEngine_AnimationCurveWrap.cs" t="Include" />
+            <e p="UnityEngine_BehaviourWrap.cs" t="Include" />
+            <e p="UnityEngine_BoundsWrap.cs" t="Include" />
+            <e p="UnityEngine_ColorWrap.cs" t="Include" />
+            <e p="UnityEngine_ComponentWrap.cs" t="Include" />
+            <e p="UnityEngine_DebugWrap.cs" t="Include" />
+            <e p="UnityEngine_GameObjectWrap.cs" t="Include" />
+            <e p="UnityEngine_KeyframeWrap.cs" t="Include" />
+            <e p="UnityEngine_MathfWrap.cs" t="Include" />
+            <e p="UnityEngine_MonoBehaviourWrap.cs" t="Include" />
+            <e p="UnityEngine_ObjectWrap.cs" t="Include" />
+            <e p="UnityEngine_ParticleSystemWrap.cs" t="Include" />
+            <e p="UnityEngine_QuaternionWrap.cs" t="Include" />
+            <e p="UnityEngine_Ray2DWrap.cs" t="Include" />
+            <e p="UnityEngine_RayWrap.cs" t="Include" />
+            <e p="UnityEngine_RendererWrap.cs" t="Include" />
+            <e p="UnityEngine_ResourcesWrap.cs" t="Include" />
+            <e p="UnityEngine_SkinnedMeshRendererWrap.cs" t="Include" />
+            <e p="UnityEngine_TextAssetWrap.cs" t="Include" />
+            <e p="UnityEngine_TimeWrap.cs" t="Include" />
+            <e p="UnityEngine_TransformWrap.cs" t="Include" />
+            <e p="UnityEngine_Vector2Wrap.cs" t="Include" />
+            <e p="UnityEngine_Vector3Wrap.cs" t="Include" />
+            <e p="UnityEngine_Vector4Wrap.cs" t="Include" />
+            <e p="UnityEngine_WaitForSecondsWrap.cs" t="Include" />
+            <e p="WrapPusher.cs" t="Include" />
+            <e p="XLuaGenAutoRegister.cs" t="Include" />
+            <e p="XLuaTest_BaseTestWrap.cs" t="Include" />
+            <e p="XLuaTest_Foo1ChildWrap.cs" t="Include" />
+            <e p="XLuaTest_Foo1ParentWrap.cs" t="Include" />
+            <e p="XLuaTest_Foo2ChildWrap.cs" t="Include" />
+            <e p="XLuaTest_Foo2ParentWrap.cs" t="Include" />
+            <e p="XLuaTest_FooExtensionWrap.cs" t="Include" />
+            <e p="XLuaTest_FooWrap.cs" t="Include" />
+            <e p="XLuaTest_IExchangerBridge.cs" t="Include" />
+            <e p="XLuaTest_InvokeLua_ICalcBridge.cs" t="Include" />
+            <e p="XLuaTest_LuaBehaviourWrap.cs" t="Include" />
+            <e p="XLuaTest_MyStructWrap.cs" t="Include" />
+            <e p="XLuaTest_NoGcWrap.cs" t="Include" />
+            <e p="XLuaTest_PeddingWrap.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="perf" t="Include">

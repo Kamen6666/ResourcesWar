@@ -29,9 +29,9 @@ public class SkillTree_PanelController : UIControllerBase
         skillDesText = _module.FindCurrentModuleWidget("Des Text#").Text;
         pointText = _module.FindCurrentModuleWidget("Skill Point Text#").Text;
         _module.FindCurrentModuleWidget("Upgrade Button#").Button.onClick.AddListener(UpgradeButton);
-<<<<<<< HEAD
+
        // _module.FindCurrentModuleWidget("CloseButton#").Button.onClick.AddListener();
-=======
+
         //获取技能按钮
         btns = _module.GetSecondWidgets();
         if (Datas == null)
@@ -47,8 +47,7 @@ public class SkillTree_PanelController : UIControllerBase
             Datas[i].skillLevel = UIConfigurationManager.GetInstance().GetSkillLevelByID(i);
             btns[i].Image.sprite = Datas[i].skillSprite;
         }
-
->>>>>>> 07bcc9490a15480bc07543ea459717d999f80fab
+        
         #region 绑定按钮
         _module.FindCurrentModuleSecondWidget("00_Fire Ball~").Button.onClick.AddListener(() =>
         {
@@ -223,8 +222,6 @@ public class SkillTree_PanelController : UIControllerBase
         UpdatePointUI();
     }
     
-<<<<<<< HEAD
-=======
     public Dictionary<int,int> SaveSkillData()
     {
         Dictionary<int, int> skillDatas = new Dictionary<int, int>();
@@ -234,5 +231,4 @@ public class SkillTree_PanelController : UIControllerBase
         }
         return skillDatas;
     }
->>>>>>> 07bcc9490a15480bc07543ea459717d999f80fab
 }
