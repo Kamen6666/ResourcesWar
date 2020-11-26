@@ -70,6 +70,7 @@ public class PhotonManager : MonoSingleton<PhotonManager> ,IPhotonPeerListener
     /// <exception cref="NotImplementedException"></exception>
     public void OnOperationResponse(OperationResponse response)
     {
+        
         Debug.Log(response.DebugMessage);
         //主操作
         byte opCode = response.OperationCode;

@@ -1,0 +1,48 @@
+ManifestFileVersion: 0
+CRC: 1619490842
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 27a1a70e719b553753a2d9baa51f4781
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c90fc19e2679e5295d10bd00f33cb4c3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Sprites/08_Skill BG/Wizard_Dragon Summon.png
+- Assets/Sprites/08_Skill BG/Archer_a crack shot.png
+- Assets/Sprites/08_Skill BG/Thief_Hiding.png
+- Assets/Sprites/08_Skill BG/Samurai_Ilseom.png
+- Assets/Sprites/08_Skill BG/Skill frame_bronze.png
+- Assets/Sprites/08_Skill BG/Samurai_Flower vortex.png
+- Assets/Sprites/08_Skill BG/Wizard_lightning bolt.png
+- Assets/Sprites/08_Skill BG/Archer_lunge.png
+- Assets/Sprites/08_Skill BG/Flame_Original.png
+- Assets/Sprites/08_Skill BG/Archer_Charge shot_1.png
+- Assets/Sprites/08_Skill BG/Flame_Green.png
+- Assets/Sprites/08_Skill BG/Thief_Back-stabbing.png
+- Assets/Sprites/08_Skill BG/Samurai_Sword Strike.png
+- Assets/Sprites/08_Skill BG/Wizard_Spatial distortion.png
+- Assets/Sprites/08_Skill BG/Wizard_Finale.png
+- Assets/Sprites/08_Skill BG/Flame_Blue.png
+- Assets/Sprites/08_Skill BG/Skill frame_silver.png
+- Assets/Sprites/08_Skill BG/Skill frame_bronze_Line.png
+- Assets/Sprites/08_Skill BG/Samurai_Prick.png
+- Assets/Sprites/08_Skill BG/Archer_Charge shot_3.png
+- Assets/Sprites/08_Skill BG/Wizard_Trick.png
+- Assets/Sprites/08_Skill BG/Archer_Charge shot_2.png
+- Assets/Sprites/08_Skill BG/Skill frame_silver_Line.png
+- Assets/Sprites/08_Skill BG/Skill frame_gold.png
+- Assets/Sprites/08_Skill BG/Thief_Assassination.png
+- Assets/Sprites/08_Skill BG/Thief_Stealing.png
+- Assets/Sprites/08_Skill BG/Thief_Halting.png
+- Assets/Sprites/08_Skill BG/Archer_Arrow rain.png
+- Assets/Sprites/08_Skill BG/Skill frame_gold_Line.png
+- Assets/Sprites/08_Skill BG/Archer_a small arrow shot by a archer.png
+- Assets/Sprites/08_Skill BG/Samurai_Anger.png
+Dependencies: []

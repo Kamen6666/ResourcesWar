@@ -34,5 +34,16 @@ namespace UIFrame
         public string WidgetName;
         public string WidgetPath;
     }
+    [Serializable]
+    public class SkillData
+    {
+        public SkillDataArray[] dataArrays;
+    }
+    [Serializable]
+    public class SkillDataArray
+    {
+        public int SkillID;
+        public int SkillLevel;
+    }
 
 }

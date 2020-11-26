@@ -1,18 +1,25 @@
-﻿using System.Collections;
+﻿using ExitGames.Client.Photon;
+using MobaCommon.Code;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Lx_Test : MonoBehaviour
 {
+    public string assetBundleName;
+    public string assetRealName;
+    SkillData skillData = null;
     private void Start()
     {
-        Debug.Log(FindMinArrowShots(new int[][]
-         {
-            new int[]{10,16},
-            new int[]{2,8 },
-            new int[]{1,6 },
-            new int[]{7,12 }
-         }));
+        //Debug.Log(FindMinArrowShots(new int[][]
+         //{
+         //   new int[]{10,16},
+         //   new int[]{2,8 },
+         //   new int[]{1,6 },
+         //   new int[]{7,12 }
+         //}));
+        StartCoroutine(LoadAssetsByWebRequest());
     }
     public int FindMinArrowShots(int[][] points)
     {
@@ -50,8 +57,56 @@ public class Lx_Test : MonoBehaviour
         return list1.Count;
     }
 
-    public void Test()
+    private IEnumerator LoadAssetsByWebRequest()
     {
-        
+        //获取要加载的资源路径【bundle总说明文件】
+        string path = "http://122.51.66.22:8080/LX/OutPutAssetBundle/OutPutAssetBundle.manifest";
+
+        //通过WebRequest的方式获取资源
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(path);
+        //等待获取
+        yield return request.SendWebRequest();
+        //获取其中的bundle
+        AssetBundle manifestBundle = DownloadHandlerAssetBundle.GetContent(request);
+        //获取到说明文件
+        AssetBundleManifest manifest = manifestBundle.LoadAsset<AssetBundleManifest>("OutPutAssetBundle");
+        //获取资源的所有依赖
+        string[] dependencies = manifest.GetAllDependencies(assetBundleName);
+
+        //获取到相对路径  file:///user/..../HLLesson11/Assets/Output/【Output】
+        path = path.Remove(path.LastIndexOf("/") + 1);
+        //声明依赖的Bundle数组
+        AssetBundle[] depAssetBundles = new AssetBundle[dependencies.Length];
+        //遍历加载所有的依赖
+        for (int i = 0; i < dependencies.Length; i++)
+        {
+            //获取到依赖Bundle的路径
+            //file:///user/..../HLLesson11/Assets/Output/mat
+            string depPath = path + dependencies[i];
+
+            request = UnityWebRequestAssetBundle.GetAssetBundle(depPath);
+            //等待获取
+            yield return request.SendWebRequest();
+            //将依赖临时保存
+            depAssetBundles[i] = DownloadHandlerAssetBundle.GetContent(request);
+        }
+
+        //获取路径
+        path += assetBundleName;
+
+        request = UnityWebRequestAssetBundle.GetAssetBundle(path);
+        //等待获取
+        yield return request.SendWebRequest();
+        //获取到资源的Bundle
+        AssetBundle realAssetBundle = DownloadHandlerAssetBundle.GetContent(request);
+
+        //加载真正的资源
+        SkillData prefab = realAssetBundle.LoadAsset<SkillData>(assetRealName);
+        //TEST:生成
+        //Instantiate(prefab);
+        skillData = prefab;
+        Debug.Log(skillData.skillName);
     }
+
+   
 }

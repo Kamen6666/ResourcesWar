@@ -25,7 +25,7 @@ namespace UIFrame
         private Dropdown _dropdown;
         private Toggle _toggle;
         private Scrollbar _scrollbar;
-        private SceneView _sceneView;
+        
         private ContentSizeFitter _sizeFitter;
         #endregion
 
@@ -40,7 +40,7 @@ namespace UIFrame
         public Dropdown Dropdown { get => _dropdown; }
         public Toggle Toggle { get => _toggle;  }
         public Scrollbar Scrollbar { get => _scrollbar;  }
-        public SceneView SceneView { get => _sceneView;  }
+        
         public ContentSizeFitter SizeFitter { get => _sizeFitter;  }
         public RectTransform RectTransform { get => _rectTransform; }
         #endregion
@@ -59,7 +59,7 @@ namespace UIFrame
                 _dropdown = GetComponent<Dropdown>();
                 _toggle = GetComponent<Toggle>();
                 _scrollbar = GetComponent<Scrollbar>();
-                _sceneView = GetComponent<SceneView>();
+               
                 _rectTransform = GetComponent<RectTransform>();
                 _sizeFitter = GetComponent<ContentSizeFitter>();
             }

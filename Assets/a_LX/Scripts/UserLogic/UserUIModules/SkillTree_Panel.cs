@@ -1,4 +1,4 @@
-using UIFrame;
+ using UIFrame;
 using UnityEngine;
 
 public class SkillTree_Panel : UIModuleBase
@@ -23,5 +23,10 @@ public class SkillTree_Panel : UIModuleBase
         }
 		controller.Refresh();
         //controller.Clear();
+    }
+    public override void OnClose()
+    {
+        base.OnClose();
+        UIConfigurationManager.GetInstance().SaveSkillJson(controller.SaveSkillData());
     }
 }

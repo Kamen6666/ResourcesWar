@@ -11,6 +11,7 @@
         /// 模块路径配置表
         /// </summary>
         public const string UIPanelConfigPath = "Configuration/ModulePathConfig";
+        public const string SkillDataConfigPath = "Configuration/SkillDataJson";
         public const string UITextLocalizationConfigPath = "Configuration/LocalizationTexts";
         public const string UIWidgetConfigPath = "LX/UI/Configuration/WidgetPathConfig";
         //重要UI元素的末尾标记
