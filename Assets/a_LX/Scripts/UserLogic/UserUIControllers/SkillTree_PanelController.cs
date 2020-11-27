@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using Utilty;
-using XLua;
-[Hotfix]
 public class SkillTree_PanelController : UIControllerBase
 {
     int skillPoint = 20;

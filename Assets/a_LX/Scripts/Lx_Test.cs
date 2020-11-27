@@ -107,6 +107,26 @@ public class Lx_Test : MonoBehaviour
         skillData = prefab;
         Debug.Log(skillData.skillName);
     }
+    public int FourSumCount(int[] A, int[] B, int[] C, int[] D)
+    {
+        int count = 0;
+        for (int i = 0; i < A.Length; i++)
+        {
+            for (int j = 0; j < B.Length; j++)
+            {
+                for (int k = 0; k < C.Length; k++)
+                {
+                    for (int z = 0; z < D.Length; z++)
+                    {
+                        if (A[i] + B[j] + C[k] + D[z] ==0)
+                        {
+                            count++;
+                        } 
+                    }
+                }
+            }
+        }
+        return count;
+    }
 
-   
 }
