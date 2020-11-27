@@ -62,6 +62,7 @@
         <e p="a_ZYX" t="Include">
           <e p="Scripts" t="Include">
             <e p="ChangePlayer.cs" t="Include" />
+            <e p="CreatePlayerList.cs" t="Include" />
             <e p="DataMrg.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="InventoryManager.cs" t="Include" />

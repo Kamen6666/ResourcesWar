@@ -28,10 +28,8 @@ public class PlayerSlot : Slot
     public override void OnPointerDown(PointerEventData eventData)
     {
         KnapsackPanel.Instance.Show();
-        
         if (InventoryManager.Instance.IsPickedItem)
         {
-            
             ItemUI pickedItem = InventoryManager.Instance.PickedItem;
             if (transform.childCount>0)
             {
@@ -46,9 +44,9 @@ public class PlayerSlot : Slot
                 if (IsRightItem(pickedItem.Item))
                 {
                     this.StoreSlotItem(InventoryManager.Instance.PickedItem.Item);
-                    PlayerInfoPanel.Instance.RefeshPlayerItem(PlayerInfoPanel.Instance.changePlayer.playerItemRam.playerid);
-                
                     InventoryManager.Instance.RemoveOneItem();
+                    PlayerInfoPanel.Instance.RefeshPlayerItem(PlayerInfoPanel.Instance.changePlayer.playerList.playerItemRam.playerid);
+                    //PlayerInfoPanel.Instance.RefeshPlayerItem(PlayerInfoPanel.Instance.changePlayer.playerList.playerItemRam.playerid);
                 }
             }
            
@@ -59,7 +57,17 @@ public class PlayerSlot : Slot
             {
                 Item item=transform.GetChild(0).GetComponent<ItemUI>().Item;
                 KnapsackPanel.Instance.StoreItem(item);
-                Destroy(transform.GetChild(0).gameObject);
+                DestroyImmediate (transform.GetChild(0).gameObject);
+                print("IsDestory     "+"|"+transform.childCount);
+                if (transform.childCount==0)
+                {
+                    print("IsRefesh");
+                    PlayerInfoPanel.Instance.RefeshPlayerItem(PlayerInfoPanel.Instance.changePlayer.playerList.playerItemRam.playerid);
+                }
+            }
+            else
+            {
+                PlayerInfoPanel.Instance.RefeshPlayerItem(PlayerInfoPanel.Instance.changePlayer.playerList.playerItemRam.playerid);
             }
         }
     }

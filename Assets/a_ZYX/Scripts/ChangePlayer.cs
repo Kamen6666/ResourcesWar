@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using Debug = System.Diagnostics.Debug;
@@ -35,23 +36,43 @@ public class SavePlayerItem
 
 public class ChangePlayer : MonoBehaviour
 {
-    public PlayerItemRAM playerItemRam;
-    
+    public int id;
+    public CreatePlayerList playerList;
     private Button changebtn;
     private Text playerName;
 
-     void Start()
+    void Awake()
+    {
+        playerList = PlayerInfoPanel.Instance.LoadPlayerDataById(id, playerList);
+    }
+    
+    void Start()
     {
         playerName = transform.GetChild(0).GetComponent<Text>();
-        playerName.text = playerItemRam.playerRamItemData.name;
+        playerName.text = playerList.playerItemRam.playerRamItemData.name;
         changebtn = GetComponent<Button>();
         changebtn.onClick.AddListener(()=>
         {
-            print("btn click");
             PlayerInfoPanel.Instance.SetChanegPlayer(this);
-            PlayerInfoPanel.Instance.LoadPlayerDataById(playerItemRam.playerid);
-          
+            PlayerInfoPanel.Instance.LoadPlayerRAMById(playerList.playerItemRam.playerid);
         });
     }
-    // Start is called before the first frame update
+
+     private void CleanData()
+     {
+         playerList.playerItemRam.playerRamItemData.exp = 0;
+         playerList.playerItemRam.playerRamItemData.level = 0;
+         playerList.playerItemRam.playerRamItemData.name = null;
+         playerList.playerItemRam.playerRamItemData.sq= 0;
+         for (int i = 0; i < 8; i++)
+         {
+             playerList.playerItemRam.playerRamItemData.itemid[i] = 0;
+         }
+     }
+     void OnApplicationQuit()
+     {
+         CleanData();
+     }
+
+
 }
